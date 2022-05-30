@@ -76,7 +76,7 @@ Based on the above analysis, an initial overview of features that would be neede
 
 ## Databases and Data Required
 
-Based on the above analysis, an inital overview of the models that would be needed for the site, and type of data in these tables can be seen below. A full description of the data models can be found in the [Database Schema section]().
+Based on the above analysis, an inital overview of the models that would be needed for the site, and type of data in these tables can be seen below. A full description of the data models can be found in the [Database Schema section](https://github.com/RiyadhKh4n/portfolio-project-5#erd-diagram).
 
 - A Users table, to store information about users, such as name, email address and password so they are able to login
 - A UserProfile table can extend the above, to include additional information such as the saved delivery address
@@ -84,6 +84,26 @@ Based on the above analysis, an inital overview of the models that would be need
 - An Orders table, to store the user, their delivery information and the order details
 - A linked table to this would be OrderLineItems which would be the individual items in an order and store the product information and quantity of that product
 
+# Search Engine Optimisation (SEO)
+
+SEO is important for all business, so that the website can be found by search engines and rank in their results, so that users will actually find the website when searching for the relevant terms. There are two parts to this: determining the keywords that might be searched for, and using them in the website; and generating the files the search engines will use to crawl the website.
+
+## Keywords
+
+Keyword research was completed in order to determine which keywords to include in the website's content, image file names and alt text, headings, page titles and in the meta description and meta keywords. A mix of short and long tail keywords were identified (from brainstorming and using Google to find related searches), within the key topics for the website like cryptocurrency and clothing. Without having access to paid keyword planner websites, it is somewhat difficult to find alternative words for some of the most popular keywords, however this would be a future feature to be implemented if the business was a real business.
+
+### Implementation of keywords
+
+- The ```meta``` ```description``` and ```keywords``` tags were included in base.html, so that they are present for all pages. These were then tweaked on some pages to be more specific to those pages
+    
+    - The products page has specific meta description and meta keywords related to the products
+    - In the product details page the product name is added to the meta description
+
+- The content aims to be trustworthy, relevant, expert and authoratative. The website includes a Privacy Policy and Terms of Use documents for trustworthiness. The product and market images are high quality (bearing in mind these are sourced using free resources but would be professional images if this were a real business)
+
+### sitemap.xml & robots.txt
+
+The sitemap.xml was created to list all the page urls that can be accessed without logging in, this helps the search engines crawl the site. A robots.txt was created, listing the urls for search engines not to access (the listed urls are to do with account sign in, the bag and checkout process and the adding of products since these are not relevant for search results). The existence of the robots.txt file will help improve SEO ranking as it shows the website acknowledges that the search engines are allowed onto the site, so is an indicator of quality. Both files exist on the deployed site. Note: since this is a project and not a live site for a real business (and hasn't been deployed to a custom domain), the last steps of registering the sitemap with Google and testing the robots.txt have not been done.
 
 ## Design
 
