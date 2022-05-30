@@ -375,8 +375,65 @@ Due to the size of the testing section for Cryptics I have created [TESTING.md](
    
 # Deployment
  
-Deploying the project using Heroku:
+## GitPod - during development
 
+Gitpod was used as the development environment, with GitHub for version control and hosting the repository. The repository for this project, and the associated workspace, was created from the [Code Institute student tempate](https://github.com/Code-Institute-Org/gitpod-full-template).
+
+- During development, code was written in the Gitpod workspace and changes to the frontend were previewed by opening the browser via the terminal in Gitpod, using the command ```python3 manage.py runserver``` and then selecting the Open Browser button when the following message appeared: "a service is available on Port 8000".
+- Libraries/Frameworks used in the application were installed by typing the relevant install command (as per documentation) in the terminal, e.g. ```pip3 install django```, where Django is the name of the framework being installed
+- Files and code were added to the staging area in Gitpod using the command ```git add .``` and commited using ```git commit -m "commit message"```.
+- Commited changes were then pushed to GitHub using the ```git push``` command.
+
+## Deployment to Heroku
+
+The following steps show how to deploy the application to [Heroku](https://id.heroku.com/login), using [AWS](https://aws.amazon.com/) to host media and static files. Note: these steps explain how you would do this, however some steps will be irrelevant if you are forking the repository as it will already contain settings.py file for example. You can also install the requirements in one go using the requirements.txt file instead of individually as explained below. The below steps are intended as a guide to explain how this project was deployed.
+
+### Inital set up in workspace:
+
+Before deploying to Heroku, the initial set up and creation of the project and app need to be completed in the IDE, in this case Gitpod workspace. Do the following in the command line:
+
+1. Install django ```pip3 install Django==3.2``` Note: using version 3.2 of Django and not the latest version which is version 4. and gunicorn: ```pip3 install django gunicorn```
+2. Install gunicorn for running the deployed website ```pip3 install gunicorn```
+3. Install supporting libraries - for postgres: ```pip3 install dj_database_url pyscopg2```
+4. Install any other required libraries/tools
+5. Create the requirements.txt file: ```pip3 freeze --local > requirements```. This creates the requirements.txt file with the above dependencies. Later on in development, any further dependencies that are installed can be added to the file using ```pip3 freeze > requirements.txt```. Heroku will use this file to install the requirements when creating the application on Heroku.
+6. Create the django project: ```django-admin startproject projectname .```. The ```.``` means create the project in the current directory
+7. Create a ```.gitignore``` file at the top directory level and add ```*.sqlite3``` to it, so that any sensitive data in the development database doesn't get pushed to GitHub, and ```*.pyc``` and ```__pycache__/``` because the complied python code is not needed in version control
+8. Create app: ```python3 manage.py startapp appname```.
+9. Go to ```settings.py``` (this is located in the project folder) and add the appname to ```INSTALLED_APPS``` list
+10. The creation of the app creates initial migrations for the model and these need to be migrated. Back in the commandline: ```python3 manage.py migrate```
+
+Repeat steps 8, 9 and 10 throughout development as you create further apps within the project. When models are created or updated during development, the changes also need to be made and migrated using ```python3 manage.py makemigration``` and ```python3 manage.py migrate```. Remember you will need to do the migrations on the production database as well. To view the local version of the project before deployment to heroku, use ```python3 manage.py runserver```, and open the port 8000 when it pops up.
+
+### Create the app on [Heroku](https://id.heroku.com/login) and attach the database:
+
+1. Sign in to/create account on Heroku, and "create app". If you don't have an account, then set one up: Click the Sign up button in the header, fill out the form and Click Create Free Account when done. You will receive an email, click the link to confirm. Then you will be brought to page called SET YOUR PASSWORD. Enter password, click SET PASSWORD AND LOG IN. Will then show welcome page, click on CLICK HERE TO PROCEED, then click Accept to accept the terms of service. Then click on "Create new app". If you do have an account then Sign In to your account and go to the Dashboard. Click on "New" on the top right of the screen and then "Create new app"
+
+2. Under App name, enter the name of the application. Note: the name must be unique, so you would not be able to name it the same as the already deployed version
+
+3. Then choose the Region and click "Create app"
+
+4. Attach the database: go to the Resources tab, Add-ons and then search for 'Heroku Postgres'. Add and choose e.g. Hobby Dev
+
+5. Back in the workspace, create a new file called ```env.py``` to store the environment variables. The file should be in the top level directory, and it should also be added to the ```.gitignore``` file to ensure it does not get pushed to GitHub as it contains sensitive information
+
+6. In env.py:
+
+    - import os
+    - ```os.environ["SECRET_KEY"] = '```generate a secret key and paste it here'
+
+7. Back in Heroku, go to Settings tab, Config Vars, click Reveal Config Vars. Add a new one called ```SECRET_KEY``` and paste in the value from the ```env.py``` file
+
+8. In the workspace go to the ```settings.py``` file and do the following (no need if using this project's settings.py file):
+
+    - add ```import``` os underneath where it says ```from pathlib import Path```
+    - underneath this, ```import dj_database_url```
+    - and then add a conditional statement to import the ```env.py``` when in the development environment.
+
+    ```python
+    if os.path.isfile('env.py'):
+    import env
+    ```
 
 ## Making a Local Clone
  
