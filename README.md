@@ -14,10 +14,10 @@
 * ## Purpose 
 
     The primary purpose of the website is for the website owner to sell cryptocurrency related merchandise online.
-   
 
 * ## Aims 
 
+    To provide users an intuative e-commerce experience where cryptocurrency enthusiasts can go to browse and purchase crypto-related accessories and clothing items
 
 * ## Users's Goals:
     - Buy crypto-related clothing online
@@ -118,6 +118,18 @@
    
 
 * ## Structure
+
+    (WEBSITE) will be developed using Django, as a result I will split the program functionality into separate apps. A Django application is a Python package that is specifically inteded for use in a Django project. For my project I will create five apps; Home, Products, Bag, Profiles and Checkout.
+
+    Home: This app will contain the code and templates the user will see when they launch the site. It will contain all of the necessary urls and views in order to render the Homepage of (WEBSITE).
+
+    Products: This app will contain the model which holds all product & category information, as well as views to display the products, allow for searching and filtering, render the product details as well as admin-only features like adding, editing and deleting products. It will also contain all templates relating to products as well as any JavaScript needed when intracting with the product pages.
+
+    Bag: This app will contain the views which allow users to view their bag, add an item to their bag, adjust their bag as well as removing items from their bag. It will also contain the ```contexts.py``` file and any templatetags as well as any templates used to render the bag to the front end.
+
+    Profiles: This app will contain the model which holds the delivery information which can be saved to the user's profile, as well as any forms needed and the views which allow the user to view their profile and see their order history. It will also contain the static files, like css and js needed to get the profile functionality working as intended and finally any templates needed.
+
+    Checkout: This app will contain the models for Orders as well as OrderLineItems and any extra functions within models.py. Here the code needed to handle the Stripe webhook will be held like webhooks.py and webhook_handler.py as well as the form needed when the user enters their delivery information. It will contain the JavaScript needed to get the Stripe API working as well as the templates for checking out and the checkout success page.
 
 # E-Commerce Business Model
 
