@@ -121,15 +121,40 @@
 
     (WEBSITE) will be developed using Django, as a result I will split the program functionality into separate apps. A Django application is a Python package that is specifically inteded for use in a Django project. For my project I will create five apps; Home, Products, Bag, Profiles and Checkout.
 
-    Home: This app will contain the code and templates the user will see when they launch the site. It will contain all of the necessary urls and views in order to render the Homepage of (WEBSITE).
+    Home:
+    - To display the Home page (index.html)
+    - Will not have models as it does not require any database information, this is a static page displaying information
 
-    Products: This app will contain the model which holds all product & category information, as well as views to display the products, allow for searching and filtering, render the product details as well as admin-only features like adding, editing and deleting products. It will also contain all templates relating to products as well as any JavaScript needed when intracting with the product pages.
+    Products: 
+    - To handle the viewing of products in the Shop page, as well as the creating, editing and deleting of products by the admin user
+    - Will have a Product model (product details) and Category model (product categrory names)
+    - Templates:
+        - Shop (displays all products, filter/sort options)
+        - Product Details (displays individual product)
+        - Add Product (add product form, admin user only)
+        - Edit Product (edit product form, admin user only)
 
-    Bag: This app will contain the views which allow users to view their bag, add an item to their bag, adjust their bag as well as removing items from their bag. It will also contain the ```contexts.py``` file and any templatetags as well as any templates used to render the bag to the front end.
+    Bag: 
+    - To handle adding items to the shopping cart, adjusting quanitity in the shopping bag and removing items
+    - There is no model in this app, however it will use the Product model from the Products App in its views
+    - Templates:
+        - Bag (display items in the shopping bag)
 
-    Profiles: This app will contain the model which holds the delivery information which can be saved to the user's profile, as well as any forms needed and the views which allow the user to view their profile and see their order history. It will also contain the static files, like css and js needed to get the profile functionality working as intended and finally any templates needed.
+    Profiles:
+    - To handle the user information - their saved delivery details and their order history
+    - Will have a USerProfile model which extends the Django User model using a OneToOne link, to store the extra information (delivery details)
+    - This app also uses the Order model from the Checkout App to display the order history
+    - Templates:
+        - My Profile (display/allows edits of saved delivery details and displays order histroy, registered users only)
 
-    Checkout: This app will contain the models for Orders as well as OrderLineItems and any extra functions within models.py. Here the code needed to handle the Stripe webhook will be held like webhooks.py and webhook_handler.py as well as the form needed when the user enters their delivery information. It will contain the JavaScript needed to get the Stripe API working as well as the templates for checking out and the checkout success page.
+    Checkout: 
+    - To handle the checkout and payment process
+    - Will have an Order model (order delivery and amoutn details) and OrderLineItem model (details of each individual item in the order)
+    - This app will also use the Product and UserProfile models from the other apps in the views
+    - Will contain the code which contect to the Stripe webhook as well as the JavaScript needed to get the payment process working
+    - Templates:
+        - Checkout (dleivery + payment form)
+        - Order confirmation (success page after checkout, also used to display details og a previous order form the profile page)
 
 # E-Commerce Business Model
 
@@ -234,7 +259,7 @@ Here describes the main features of the website and what the user can expect whe
 
 - [Python](https://www.python.org/) - Python is an interpreted high-level general-purpose programming language. It is used when creating the backend functionality in Django
 
-- [JavaScript](https://www.javascript.com/) - JavaScript is one of the core technologies of the World Wide Web, alongside HTML and CSS. Over 97% of websites use JavaScript on the client side for web page behavior, often incorporating third-party libraries
+- [JavaScript](https://www.javascript.com/) - JavaScript is a high-level language that has dynamic typing, prototype-based object-orientation, and first-class functions. It is multi-paradigm, supporting event-driven, functional, and imperative programming styles.
  
 I used GitHub [Project Boards](https://github.com/RiyadhKh4n/portfolio-project-5/projects/1) to keep track of all the User Stories and Tasks necessary in order to build Cryptics
 
