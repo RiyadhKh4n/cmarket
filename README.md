@@ -74,6 +74,16 @@ Based on the above analysis, an initial overview of features that would be neede
 - There needs to be a chekcout process, and for registered users an option to use their saved delivery details for a quicker checkout
 - Customer loyalty is an important factor, so there should also be a newsletter sign up, so that the site owner can keep customers up to date with latest products and deals. There should also be a Facebook Business page which is linked in the footer
 
+## Databases and Data Required
+
+Based on the above analysis, an inital overview of the models that would be needed for the site, and type of data in these tables can be seen below. A full description of the data models can be found in the [Database Schema section]().
+
+- A Users table, to store information about users, such as name, email address and password so they are able to login
+- A UserProfile table can extend the above, to include additional information such as the saved delivery address
+- A Products table, used to store information such as product name, description, price, sku, image and the category
+- An Orders table, to store the user, their delivery information and the order details
+- A linked table to this would be OrderLineItems which would be the individual items in an order and store the product information and quantity of that product
+
 
 ## Design
 
