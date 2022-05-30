@@ -11,24 +11,70 @@
 
 # User Experience (UX)
  
-* ## Vision      
+* ## Purpose 
+
+    The primary purpose of the website is for the website owner to sell cryptocurrency related merchandise online.
    
 
-* ## Aims
-   
- 
-* ## Target Audience
+* ## Aims 
+
+
+* ## Users's Goals:
+    - Buy crypto-related clothing online
+    - Create a profile so that they can save their delivery information and also see their order history and qualify for customer benefits
+
+* ## Site Owner's Goals:
+    - Sell their crypto-related merchandise online
+    - Maintain a list of registered users so they can send the newsletter to them, offering exclusive products and discounts
     
+* ## Target Audience
+
+    The global cryptocurrency market stood at a revenue of $1,542.9m in 2021, and with that, it has lead to a growth in crypto-related products like clothing and accessories. As a result, (WEBSITE's) target audience are for cryptocurrency enthusiasts who would like to purchase items of clothing related to their favourite coin/token. Our site offers a variety of products, from T-Shirts, Hoddies, Gym Vests and Hats allowing customers to have a range of options to chose from. 
  
 * ## User Stories
 
 
 * ## Development Method
+
+    When developing (WEBSITE) I will take an Agile Approach. Meaning I will take an iterative approach to project management and software development helping me to deliver value faster and speed up development time. I will focus on working software over comprehensive documentation and responding to change over following a plan when creating the project.
+
+    I also intergrated the MoSoCoW method which is a four-step approach to prioritizing which project requirements will provide the best return on investment (ROI). MoSCoW stands for Must- Have, Should-Have, Could-Have and Wont-Have. Using this method, I am able to label and order my User Stories into four categories, allowing me to know which ones to focus on and to ensure I meet my project vision and aims.
    
 
 * ## Structure
-    
- 
+
+# E-Commerce Business Model
+
+The following section documents the planning process for the website, based on the type of e-commerce application it is, what products it is selling, and the customers it will have.
+
+## E-commerce application type
+
+This e-commerce application sells its products to customers who are individuals, therefore the business model is a B2C (Business to Customer). The website will sell products (rather than services) and is based on a single payment model, i.e. the customer pays for the product and that completes the transaction, there are no ongoing fees or subscriptions. The model is a Direct to Consumer one, i.e. there are no third party intermediaries involved.
+
+These factors mean that the following need to be taken account in the design/planning of the website:
+
+- Customers, as individuals rather than businesses, might make impulse buys
+- The website will need good quality images of the products, to show the customers what they are buying and to build trust in what they are buying
+- The decision making process is shorter and they can make their own choice to buy the product (as opposed to justifying the expenditure to managers, which is the case in the B2B model)
+- As a result, the steps the user needs to take to complete a purchase on the website should be as easy as possible and the design should take account of this.
+- Since products are being sold, the database will need to store the details of these products
+- There should be an ability for the customer to sort and filter products in the shop
+- As the payment is a single payment, customers would expect to receive a confirmation once they have completed their purchase
+
+## Features to be included
+
+Based on the above analysis, an initial overview of features that would be needed are listed below. The full list of features implemented are outlined in the [Existing Features](https://github.com/RiyadhKh4n/portfolio-project-5#existing-features) section.
+
+- Since items will be sold direct to customer and are all cryptocurrency related, the website should make it clear that all products are crypto-related (this should follow into the product descriptions)
+- The site should contain high-quality images of all products as well as descriptions of the products so users can easily make the decision to buy
+- The shop should allow users to sort and filter the products by the relevant categories so customers can find what they are looking for
+- The path to making the purchase should be as easy/seamless as possible to allow the customer complete the transaction
+- There must be a shopping bag/cart functionality so that users can add items to the cart, view the cart and ither go back to shopping or complete the checkout process
+- There needs to be a login and authentication mechanism for users, so they can view their details and order history. Anonymous checkout should also be allowed if users do not have an account created
+- There needs to be a chekcout process, and for registered users an option to use their saved delivery details for a quicker checkout
+- Customer loyalty is an important factor, so there should also be a newsletter sign up, so that the site owner can keep customers up to date with latest products and deals. There should also be a Facebook Business page which is linked in the footer
+
+
 ## Design
 
 * ### Wireframes
@@ -70,7 +116,7 @@ Here describes the main features of the website and what the user can expect whe
 
 - [Python](https://www.python.org/) - Python is an interpreted high-level general-purpose programming language. It is used when creating the backend functionality in Django
 
-- [JavaScript](https://www.javascript.com/) - JavaScript, often abbreviated JS, is a programming language that is one of the core technologies of the World Wide Web, alongside HTML and CSS. Over 97% of websites use JavaScript on the client side for web page behavior, often incorporating third-party libraries
+- [JavaScript](https://www.javascript.com/) - JavaScript is one of the core technologies of the World Wide Web, alongside HTML and CSS. Over 97% of websites use JavaScript on the client side for web page behavior, often incorporating third-party libraries
  
 I used GitHub [Project Boards](https://github.com/RiyadhKh4n/portfolio-project-5/projects/1) to keep track of all the User Stories and Tasks necessary in order to build Cryptics
 
