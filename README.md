@@ -8,8 +8,6 @@
 ![AmIResponsive]()
 
 ---
-
-# User Experience (UX)
  
 * ## Purpose 
 
@@ -119,6 +117,8 @@ The business owner can use the newsletter to:
 
 The business owner doesn't have to invest much time to manage the email marketing, and can try out different types of formats for the newsletter over time to see what works, so it is an easy strategy to get started with in the early days of the business. They need to ensure they are GDPR compliant by making it an opt in process (which it will be via the sign up form) and making it easy to unsubscribe - the link to unsubscribe should be in each email sent. The business will use [Mailchimp](https://mailchimp.com/en-gb/) to manage the collection of email addresses and the sending out of newsletters. This service is free for up to 2,000 subscribers and also provides insights and analytics tools along with many guides and useful information to help users.
 
+# User Experience (UX)
+
 ## User Stories
 
 For ease of reading, the user stories around similar actions have been grouped into loose categories:
@@ -208,7 +208,6 @@ For ease of reading, the user stories around similar actions have been grouped i
 When developing (WEBSITE) I will take an Agile Approach. Meaning I will take an iterative approach to project management and software development helping me to deliver value faster and speed up development time. I will focus on working software over comprehensive documentation and responding to change over following a plan when creating the project.
 
 I also intergrated the MoSoCoW method which is a four-step approach to prioritizing which project requirements will provide the best return on investment (ROI). MoSCoW stands for Must- Have, Should-Have, Could-Have and Wont-Have. Using this method, I am able to label and order my User Stories into four categories, allowing me to know which ones to focus on and to ensure I meet my project vision and aims.
-   
 
 ## Structure
 
