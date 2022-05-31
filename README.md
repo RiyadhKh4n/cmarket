@@ -9,25 +9,25 @@
 
 ---
  
-* ## Purpose 
+## Purpose 
 
-    The primary purpose of the website is for the website owner to sell cryptocurrency related merchandise online.
+The primary purpose of the website is for the website owner to sell cryptocurrency related merchandise online.
 
-* ## Aims 
+## Aims 
 
-    To provide users an intuative e-commerce experience where cryptocurrency enthusiasts can go to browse and purchase crypto-related accessories and clothing items
+To provide users an intuative e-commerce experience where cryptocurrency enthusiasts can go to browse and purchase crypto-related accessories and clothing items
 
-* ## Users's Goals:
-    - Buy crypto-related clothing online
-    - Create a profile so that they can save their delivery information and also see their order history and qualify for customer benefits
+## Users's Goals:
+- Buy crypto-related clothing online
+- Create a profile so that they can save their delivery information and also see their order history and qualify for customer benefits
 
-* ## Site Owner's Goals:
-    - Sell their crypto-related merchandise online
-    - Maintain a list of registered users so they can send the newsletter to them, offering exclusive products and discounts
+## Site Owner's Goals:
+- Sell their crypto-related merchandise online
+- Maintain a list of registered users so they can send the newsletter to them, offering exclusive products and discounts
     
-* ## Target Audience
+## Target Audience
 
-    The global cryptocurrency market stood at a revenue of $1,542.9m in 2021, and with that, it has lead to a growth in crypto-related products like clothing and accessories. As a result, (WEBSITE's) target audience are for cryptocurrency enthusiasts who would like to purchase items of clothing related to their favourite coin/token. Our site offers a variety of products, from T-Shirts, Hoddies, Gym Vests and Hats allowing customers to have a range of options to chose from. 
+The global cryptocurrency market stood at a revenue of $1,542.9m in 2021, and with that, it has lead to a growth in crypto-related products like clothing and accessories. As a result, (WEBSITE's) target audience are for cryptocurrency enthusiasts who would like to purchase items of clothing related to their favourite coin/token. Our site offers a variety of products, from T-Shirts, Hoddies, Gym Vests and Hats allowing customers to have a range of options to chose from. 
 
 # E-Commerce Business Model
 
