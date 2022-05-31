@@ -218,6 +218,32 @@ Keyword research was completed in order to determine which keywords to include i
 
 The sitemap.xml was created to list all the page urls that can be accessed without logging in, this helps the search engines crawl the site. A robots.txt was created, listing the urls for search engines not to access (the listed urls are to do with account sign in, the bag and checkout process and the adding of products since these are not relevant for search results). The existence of the robots.txt file will help improve SEO ranking as it shows the website acknowledges that the search engines are allowed onto the site, so is an indicator of quality. Both files exist on the deployed site. Note: since this is a project and not a live site for a real business (and hasn't been deployed to a custom domain), the last steps of registering the sitemap with Google and testing the robots.txt have not been done.
 
+# Marketing
+
+The first part of the marketing strategy for this business is ensuring that the webpage is optimised as far as possible in terms of search engines. The measures taken to address this are outlined above in the [Search Engine Optimisation (SEO)](https://github.com/RiyadhKh4n/portfolio-project-5#search-engine-optimisation-seo) section. The other marketing measures to be employed are explained below.
+
+(WEBSITE) is a small, one person business and its goals are to sell its crypto-related products online. The website users will be a mix of male/female as crypto is for everyone, as a result, we will accomodate for both male and female shoppers by offering unisex and gender specific items of clothing, with the estimated average age of users being 20 - 40. This age group are amongst users who use social media heavily, as a result, the most appropriate platform would be those with a more visual basis such as Instagram and Facebook as these are the most popular with the given age range. TikTok will not be used as its audience is mainly younger, however this can be revised in the future. As the business is new and does not have the budget for aggressive advertising, it will focus on organic growth through Social Media Marketing.
+
+A Facebook Business Page will be created which will promote the business, promote the products being sold and be a platform which advertising campaign can be held to help reach a wider audience. The content on the Facebook page can be reused on the other social channels and can include:
+
+- Photos showing the products on offer
+- Posts alerting followers of new products, special offers and products back in stock
+- Informative posts about the business and its misson
+- Posts asking for user engagement such as a poll to see which products customers would like to see
+- Posts which alert followers of giveaways where they can potentially win items for free
+
+During project development, the Facebook business page was created and the link added to the website foooter. The business details were added, with a Shop button, a link to the website, page description and a welcome post. However, as expected because the business doesn't exist, the page was taken down by Facebook so the link no longer works. [Here is a screenshot of the Facebook business page]() before it was taken down.
+
+Email marketing is free (for the numbers this small business will initially have) and relatively easy to set up, so the business will use this too. The website will include a section in the footer to sign up to the newsletter. Building up a list of email subscribers through the newsletter sign up means the business will then have a pool of people who it knows are interested in its products (as they voluntarily signed up!) so are more likely to make a purchase.
+
+The business owner can use the newsletter to:
+
+- highlight when new products have been added to the website
+- let subscribers know about any discounts or promotions which are live
+- let subscribers know when an item is back in stock on the website
+
+The business owner doesn't have to invest much time to manage the email marketing, and can try out different types of formats for the newsletter over time to see what works, so it is an easy strategy to get started with in the early days of the business. They need to ensure they are GDPR compliant by making it an opt in process (which it will be via the sign up form) and making it easy to unsubscribe - the link to unsubscribe should be in each email sent. The business will use [Mailchimp](https://mailchimp.com/en-gb/) to manage the collection of email addresses and the sending out of newsletters. This service is free for up to 2,000 subscribers and also provides insights and analytics tools along with many guides and useful information to help users.
+
 ## Design
 
 * ### Wireframes
