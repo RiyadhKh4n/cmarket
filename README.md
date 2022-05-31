@@ -435,6 +435,89 @@ Repeat steps 8, 9 and 10 throughout development as you create further apps withi
     import env
     ```
 
+    This means the environment variables in ```env.py``` are used while in the development workspace, but if not in the development environment then it will use the ones set in Heroku.
+
+    - update the value for ```SECRET_KEY``` to get it from ```env.py``` or Heroku: ```SECRET_KEY = os.environ.get('SECRET_KEY')```
+    - update the ```DATABASES``` section so that it connects to Heroku Postgres database on the deployed site (where there is a DATABASE_URL config var), and to the development sqlite3 in the local environment:
+
+    ```python
+        if 'DATABASE_URL' in os.environ:
+        DATABASES = {
+                'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+            }
+        else:
+            DATABASES = {
+                'default': {
+                    'ENGINE': 'django.db.backends.sqlite3',
+                    'NAME': BASE_DIR / 'db.sqlite3',
+                }
+            }
+    ```
+
+    When you need to connect to the Postgres database from the local development environment (e.g. to run migrations, create a superuser, etc.), you can adjust the above as needed so that you connect to Postgres. You will need to add the DATABASE_URL value to connect, but remember not to commit this to the repo as it should remain secret.
+
+9. Attach to the Postgres database (adjust in settings.py as needed, and use the database_url key but do not commit it) and in the command line, make the migrations to the Heroku Postgres database: ```python3 manage.py migrate```
+
+10. Then import the data using the fixtures files. Repeat the following command, with appropriate file name for each fixture file (categories, products, counties, markets) to import the data to the Postgres database: ```python3 manage.py loaddate filename```. Note the categories file must be imported before products, and counties before markets as they contain the foreign key information.
+
+11. After doing the above, revert the DATABASES settings back as shown in step 8 above, so that production is connected to Postgres and development attached to local sqllite3 database.
+
+### Add allowed hosts and create Procfile:
+
+1. In ```settings.py```, find the ```ALLOWED_HOSTS``` list and add the heroku appname to it: ```ALLOWED_HOSTS = ['yourherokuappname.herokuapp.com', 'localhost']```. This is so that the Heroku hostname is recognised and Django will allow it to run the project
+
+2. Create a file named ```Procfile```, this must be at the top level directory
+
+3. Inside the Procfile add ```web: gunicorn projectname.wsgi```. This is so that Heroku knows how to run the project
+
+
+### Inital Deployment:
+
+1. Add all the changes above, commit them and push them to GitHub using ```git add```, ```git commit -m "commit msg"``` and ```git push``` commands in command line
+
+2. Go to Heroku and in Config vars, add ```DISABLE_COLLECTSTATIC``` with a value of 1, for the initial deployment.
+
+3. In the Deploy Tab, go to Deployment method and click GitHub
+
+    - If have not connected to GitHub previously:
+        
+        - Underneath, it will show a section called Connect to GitHub, with a button at the bottom called “Connect to GitHub”. Press this button.
+
+        - A pop up will ask you to Authorize Heroku’s access to your GitHub – click to Authorize, then enter your password and Confirm Password
+
+        - The pop up will close and in the Connect to GitHub section it will show your GitHub username and a box to search for the repository to connect to.
+
+    - If have already connected to GitHub you do not need to do the above and it should show your GitHub username and a box to search for the repo name as above
+
+    - Enter the repo-name in the box and press Search
+
+    - Underneath, it will display the repo: ```yourGitHubUsername/your-github-repo-name```, then press "Connect"     
+
+    - Once connected it will show: Connected to ```yourGitHubUsername/your-github-repo-name``` by ```yourGitHubUsername```
+
+4. Underneath the Connect section, there are two options "Automatic deploys" or "Manual deploy"
+
+    - Automatic – future pushes to GitHub will mean Heroku automatically builds a new version of the app with the pushed changes
+
+    - Manual – the app is not automatically updated with future pushes to GitHub but these can be manually made if needed.
+
+    - Click, Deploy Branch. I deployed using Manual. The logs will show the dependencies and requirements being installed. When done, the page will refresh and say “Your app was successfully deployed” with a View button.
+
+#### To do the above setps 3 & 4 through command line instead:
+
+- Use command ```heroku login -i``` and enter you username and password when prompted. You will see confirmation in the terminal that you are logged in.
+
+- Set the remote for the app on heroku using command heroku ```git:remote -a APP-NAME```. You should see confirmation that the remote has been set to the heroku remote for that app.
+
+- Push to heroku to do the deployment, using command ```git push heroku main``` (when you push to the repo on github you will use command ```git push origin main```)
+
+- You will see the build log in the terminal and after it has completed it will confirm the deployment was done, with the version number and the url for the website
+
+*The rest of the process is the same regardless of whether the deployment was done through Heroku dashboard or via the command line:*
+
+5. In Heroku, Click the Open app (or View button if still in the Deploy tab in Heroku) to view the app – it opens in a new window. For the initial deployment the static and media files have not been used but the database information should be there.
+
+
 ## Making a Local Clone
  
 1. Log in to GitHub and locate the [GitHub Repository]()
