@@ -254,7 +254,7 @@ Checkout:
 
 * ### ERD Diagram
 
-    ![ERD Diagram]()
+    ![ERD Diagram](images/README.md/erd.png)
 
 * ### Colour Scheme
 
