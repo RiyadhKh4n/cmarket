@@ -213,7 +213,9 @@ I also intergrated the MoSoCoW method which is a four-step approach to prioritiz
 
 * ### Wireframes
 
-* ### ERD Diagram
+    ![m.wireframe](images/README.md/mobilewireframes.png)
+
+* ### Entity Relationship Diagram
 
     ![ERD Diagram](images/README.md/erd.png)
 
