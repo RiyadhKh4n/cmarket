@@ -209,13 +209,21 @@ When developing (WEBSITE) I will take an Agile Approach. Meaning I will take an 
 
 I also intergrated the MoSoCoW method which is a four-step approach to prioritizing which project requirements will provide the best return on investment (ROI). MoSCoW stands for Must- Have, Should-Have, Could-Have and Wont-Have. Using this method, I am able to label and order my User Stories into four categories, allowing me to know which ones to focus on and to ensure I meet my project vision and aims.
 
-## Structure
+## Design
 
-(WEBSITE) will be developed using Django, as a result I will split the program functionality into separate apps. A Django application is a Python package that is specifically inteded for use in a Django project. For my project I will create five apps; Home, Products, Bag, Profiles and Checkout.
+* ### Wireframes
+
+* ### ERD Diagram
+
+    ![ERD Diagram](images/README.md/erd.png)
+
+### Structure
+
+(WEBSITE) will be developed using Django, as a result I will split the program functionality into separate apps. A Django application is a Python package that is specifically inteded for use in a Django project. For my project I will create six apps; Home, Products, Bag, Profiles, Checkout and Wishlist.
 
 Home:
 - To display the Home page (index.html)
-- Will not have models as it does not require any database information, this is a static page displaying information
+- Will contain two models, Newsletter and ContactForm. This is because the functionality for these two features will be within the footer, whose template will be within the Home app.
 
 Products: 
 - To handle the viewing of products in the Shop page, as well as the creating, editing and deleting of products by the admin user
@@ -241,20 +249,19 @@ Profiles:
 
 Checkout: 
 - To handle the checkout and payment process
-- Will have an Order model (order delivery and amoutn details) and OrderLineItem model (details of each individual item in the order)
+- Will have an Order model (order delivery and amount details) and OrderLineItem model (details of each individual item in the order)
 - This app will also use the Product and UserProfile models from the other apps in the views
 - Will contain the code which contect to the Stripe webhook as well as the JavaScript needed to get the payment process working
 - Templates:
-    - Checkout (dleivery + payment form)
+    - Checkout (delivery + payment form)
     - Order confirmation (success page after checkout, also used to display details og a previous order form the profile page)
 
-## Design
-
-* ### Wireframes
-
-* ### ERD Diagram
-
-    ![ERD Diagram](images/README.md/erd.png)
+Wishlist:
+- To handle the wishlist functionality of the site
+- Will have the wishlist model which stores the product being added, its image as well as the date when it was added
+- Will contain the code which handles the CRUD functionality of the wishlist
+- Templates:
+    - Wishlist (allow users to view, edit and delete items from their wishlist)
 
 * ### Colour Scheme
 
