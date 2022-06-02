@@ -211,10 +211,10 @@ I also intergrated the MoSoCoW method which is a four-step approach to prioritiz
 
 ## Design
 
-* ### Wireframes
+### Wireframes
 
-    ![m.wireframe](images/README.md/mobilewireframe.png)
-    ![d.wireframe](images/README.md/desktopwireframe.png)
+![m.wireframe](images/README.md/mobilewireframe.png)
+![d.wireframe](images/README.md/desktopwireframe.png)
 
 ### Database Schema
 
