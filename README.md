@@ -256,55 +256,55 @@ The data is organised using the following models:
     - each time a user clicks the 'heart' on a product, it will be added to their wishlist
     - within the wishlist, users can edit and delete items from it
 
-* ### Entity Relationship Diagram
+### Entity Relationship Diagram
 
-    ![ERD Diagram](images/README.md/erd.png)
+![ERD Diagram](images/README.md/erd.png)
 
-    ### Project Structure
+### Project Structure
 
-    (WEBSITE) will be developed using Django, as a result I will split the program functionality into separate apps. A Django application is a Python package that is specifically inteded for use in a Django project. For my project I will create six apps; Home, Products, Bag, Profiles, Checkout and Wishlist.
+(WEBSITE) will be developed using Django, as a result I will split the program functionality into separate apps. A Django application is a Python package that is specifically inteded for use in a Django project. For my project I will create six apps; Home, Products, Bag, Profiles, Checkout and Wishlist.
 
-    Home:
-    - To display the Home page (index.html)
-    - Will contain two models, Newsletter and ContactForm. This is because the functionality for these two features will be within the footer, whose template will be within the Home app.
+Home:
+- To display the Home page (index.html)
+- Will contain two models, Newsletter and ContactForm. This is because the functionality for these two features will be within the footer, whose template will be within the Home app.
 
-    Products: 
-    - To handle the viewing of products in the Shop page, as well as the creating, editing and deleting of products by the admin user
-    - Will have a Product model (product details) and Category model (product categrory names)
-    - Templates:
-        - Shop (displays all products, filter/sort options)
-        - Product Details (displays individual product)
-        - Add Product (add product form, admin user only)
-        - Edit Product (edit product form, admin user only)
+Products: 
+- To handle the viewing of products in the Shop page, as well as the creating, editing and deleting of products by the admin user
+- Will have a Product model (product details) and Category model (product categrory names)
+- Templates:
+    - Shop (displays all products, filter/sort options)
+    - Product Details (displays individual product)
+    - Add Product (add product form, admin user only)
+    - Edit Product (edit product form, admin user only)
 
-    Bag: 
-    - To handle adding items to the shopping cart, adjusting quanitity in the shopping bag and removing items
-    - There is no model in this app, however it will use the Product model from the Products App in its views
-    - Templates:
-        - Bag (display items in the shopping bag)
+Bag: 
+- To handle adding items to the shopping cart, adjusting quanitity in the shopping bag and removing items
+- There is no model in this app, however it will use the Product model from the Products App in its views
+- Templates:
+    - Bag (display items in the shopping bag)
 
-    Profiles:
-    - To handle the user information - their saved delivery details and their order history
-    - Will have a USerProfile model which extends the Django User model using a OneToOne link, to store the extra information (delivery details)
-    - This app also uses the Order model from the Checkout App to display the order history
-    - Templates:
-        - My Profile (display/allows edits of saved delivery details and displays order histroy, registered users only)
+Profiles:
+- To handle the user information - their saved delivery details and their order history
+- Will have a USerProfile model which extends the Django User model using a OneToOne link, to store the extra information (delivery details)
+- This app also uses the Order model from the Checkout App to display the order history
+- Templates:
+    - My Profile (display/allows edits of saved delivery details and displays order histroy, registered users only)
 
-    Checkout: 
-    - To handle the checkout and payment process
-    - Will have an Order model (order delivery and amount details) and OrderLineItem model (details of each individual item in the order)
-    - This app will also use the Product and UserProfile models from the other apps in the views
-    - Will contain the code which contect to the Stripe webhook as well as the JavaScript needed to get the payment process working
-    - Templates:
-        - Checkout (delivery + payment form)
-        - Order confirmation (success page after checkout, also used to display details og a previous order form the profile page)
+Checkout: 
+- To handle the checkout and payment process
+- Will have an Order model (order delivery and amount details) and OrderLineItem model (details of each individual item in the order)
+- This app will also use the Product and UserProfile models from the other apps in the views
+- Will contain the code which contect to the Stripe webhook as well as the JavaScript needed to get the payment process working
+- Templates:
+    - Checkout (delivery + payment form)
+    - Order confirmation (success page after checkout, also used to display details og a previous order form the profile page)
 
-    Wishlist:
-    - To handle the wishlist functionality of the site
-    - Will have the wishlist model which stores the product being added, its image as well as the date when it was added
-    - Will contain the code which handles the CRUD functionality of the wishlist
-    - Templates:
-        - Wishlist (allow users to view, edit and delete items from their wishlist)
+Wishlist:
+- To handle the wishlist functionality of the site
+- Will have the wishlist model which stores the product being added, its image as well as the date when it was added
+- Will contain the code which handles the CRUD functionality of the wishlist
+- Templates:
+    - Wishlist (allow users to view, edit and delete items from their wishlist)
 
 * ### Colour Scheme
 
