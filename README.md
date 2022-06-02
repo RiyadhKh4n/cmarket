@@ -211,15 +211,56 @@ I also intergrated the MoSoCoW method which is a four-step approach to prioritiz
 
 ## Design
 
+
+
 * ### Wireframes
 
     ![m.wireframe](images/README.md/mobilewireframes.png)
+
+### Database Schema
+
+The datasets for the project are:
+
+- Home Information: allows users to join newsletter or contact the site admin
+- User Information: username, email, password and saved delivery info
+- Product Information: products displayed in shop
+- Category Information: the category each product belongs to
+- Order Information: items the user purchased
+- Wishlist Information: saved items users added to wishlist
+
+The data is organised using the following models:
+
+- **User**: Django built in User model. For authentication and authorisation
+- **UserProfile**: to store extra information relating to the user, in this case their delivery details
+    - extends the Django User model using a OneToOne relationship
+    - an instance of this model will be created each time a User record is created
+    - the delivery info fields can all be blank as a user does not have to save these details to their profile
+    - delivery info can be saved/edited on the UserProfile record by the user either ticking te save delivery info checkbox on the Checkout form, or by updating the USerProfile form on the profile page
+- **Category**: Holds the categories for the products
+    - friendly name is the name shown on the front-end
+    - name must be unique so as to avoid conflicts when filtering by category
+    - admin user will create/edit/delete instances of this model via the Django admin site
+- **Product**: Holds the details of the products that will be displayed on the Shop page
+    - each product must have a category, Category is a ForeignKey (One-To-Many) in the Product model
+    - product name must be unique
+    - admin user will create instances of this model via the form on the add product page on the frontend. They will edit and delete from the links on each product in the Shop page also. (Shop page displays all products, not just active, to the admin user)
+- **Order**: The details of an Order
+    - instances of this model are created during the Checkout process
+    - this model will have some methods to create the order_number, calcuate the order_total, delivery_cost and grand_total and works in conjunction with the OrderLineItem model
+    - this model includes two fields which will be used during the webhook handling process with Stripe. During this process, a check is done to see if the order is already in the database, and if not then create it. Since the same customer can order the same item(s) on more than one occasion, there needs to be some unique fields to prevent the previous identical order being found as this new order. These fields are: 'original_cart', a TextField containing a json dump of the bag, and 'stripe_pid', the Stripe payment intent id from the order, which is unique.
+- **OrderLineItem**: The individual items in the Order instance
+    - Order is a ForeignKey in this model (one order to many line items)
+    - Product is a ForeignKey in this model to access the product details
+    - this model calculates the total for each line item, which is then used by the ORder model to calculate the grand total
+- **Wishlist**: The items a user adds to their wishlist
+    - each time a user clicks the 'heart' on a product, it will be added to their wishlist
+    - within the wishlist, users can edit and delete items from it
 
 * ### Entity Relationship Diagram
 
     ![ERD Diagram](images/README.md/erd.png)
 
-    ### Structure
+    ### Project Structure
 
     (WEBSITE) will be developed using Django, as a result I will split the program functionality into separate apps. A Django application is a Python package that is specifically inteded for use in a Django project. For my project I will create six apps; Home, Products, Bag, Profiles, Checkout and Wishlist.
 
