@@ -35,7 +35,9 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
 
-    'home', 'bag', 'checkout', 'products', 'profiles', 'wishlist'
+    'home', 'bag', 'checkout', 'products', 'profiles', 'wishlist',
+
+    'django_countries'
 ]
 
 MIDDLEWARE = [
