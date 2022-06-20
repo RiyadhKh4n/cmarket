@@ -3,13 +3,13 @@ html {
 }
 
 body{
-    background-color: #24262b;
-    color: #fff;
+    background-color: #373b46;
+    color: black;
 }
 
 /* Navbar */
 .navbar{
-    background-color: #373b46;
+    background-color: #24262b;
 }
 
 .logo{
@@ -29,7 +29,7 @@ li > a > div > p{
 /* index.html */ 
 .jumbotron{
     height: 30vh;
-    background-color: #373b46;
+    background-color: #24262b;
     margin-bottom: 0;
 }
 
@@ -49,4 +49,24 @@ li > a > div > p{
 .wrapper > div {
     border: 1px solid red;
     color: #fff
+}
+
+/* Products Page */
+.overlay{
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background:#24262b;
+    z-index: -1;
+}
+
+.card{
+    background-color: #373b46;
+}
+
+.card-footer{
+    background-color: #373b46;
+
 }
