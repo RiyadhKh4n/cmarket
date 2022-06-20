@@ -1,0 +1,51 @@
+html {
+    height: 100%;
+}
+
+body{
+    background-color: #24262b;
+}
+
+/* Navbar */
+.navbar{
+    background-color: #373b46;
+}
+
+.logo{
+    margin-left: 50px;
+    font-size: 3em;
+    color: #fff;
+}
+
+li > a > div > div > i{
+    color: #fff;
+}
+
+li > a > div > p{
+    color: #fff;
+}
+
+/* index.html */ 
+.jumbotron{
+    height: 30vh;
+    background-color: #373b46;
+    margin-bottom: 0;
+}
+
+.jumbotron-text{
+    color: #fff;
+}
+
+.shop-now-button{
+    color: #fff;
+}
+
+.wrapper{
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    height: 30vh;   
+}
+.wrapper > div {
+    border: 1px solid red;
+    color: #fff
+}
