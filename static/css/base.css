@@ -26,6 +26,10 @@ li > a > div > p{
     color: #fff;
 }
 
+.fa-search{
+    color:#fff;
+}
+
 /* index.html */ 
 .jumbotron{
     height: 30vh;
@@ -68,5 +72,4 @@ li > a > div > p{
 
 .card-footer{
     background-color: #373b46;
-
 }
