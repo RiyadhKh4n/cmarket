@@ -83,3 +83,24 @@ li > a > div > p{
     border: 1px solid #fff;
     color: #fff;
 }
+
+/* Bag */
+
+.bag-tr > td > p {
+    color: white;
+}
+
+tr > td > h6,
+tr > td > h4,
+.delivery-msg {
+    color: white;
+}
+
+.white{
+    color: #fff;
+}
+
+.font-white{
+    color: #fff;
+    border: 1px solid white;
+}
