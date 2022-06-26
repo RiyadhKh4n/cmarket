@@ -92,6 +92,7 @@ li > a > div > p{
 
 tr > td > h6,
 tr > td > h4,
+tr > th,
 .delivery-msg {
     color: white;
 }
