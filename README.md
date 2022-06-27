@@ -1,7 +1,10 @@
-# ADD SITE NAME
+# cMarket
 
+cMarket is an E-Commerce site where customers can go to purchase cryptocurrency related merchandise. In additon to being able to purchase clothing and accessories, users are able to add items to their wishlist and subscribe to the cMarket newsletter which contains all of the latest deals and products coming to the site.
 
-[NAME - Deployed Site]()
+cMarket is a Full-Stack application built with the Django framework which includes full CRUD functionality allowing users to Sign Up / Log In to their account as well as viewing all products, adding items to their bag and wishlist and having full payment functionality through Stripe.
+
+[cMarket - Deployed Site]()
 
 ---
 
@@ -27,7 +30,7 @@ To provide users an intuative e-commerce experience where cryptocurrency enthusi
     
 ## Target Audience
 
-The global cryptocurrency market stood at a revenue of $1,542.9m in 2021, and with that, it has lead to a growth in crypto-related products like clothing and accessories. As a result, (WEBSITE's) target audience are for cryptocurrency enthusiasts who would like to purchase items of clothing related to their favourite coin/token. Our site offers a variety of products, from T-Shirts, Hoddies, Gym Vests and Hats allowing customers to have a range of options to chose from. 
+The global cryptocurrency market stood at a revenue of $1,542.9m in 2021, and with that, it has lead to a growth in crypto-related products like clothing and accessories. As a result, cMarket's target audience are for cryptocurrency enthusiasts who would like to purchase items of clothing related to their favourite coin/token. Our site offers a variety of products, from T-Shirts, Hoddies, Gym Vests and Hats allowing customers to have a range of options to chose from. 
 
 # E-Commerce Business Model
 
@@ -95,7 +98,7 @@ The sitemap.xml was created to list all the page urls that can be accessed witho
 
 The first part of the marketing strategy for this business is ensuring that the webpage is optimised as far as possible in terms of search engines. The measures taken to address this are outlined above in the [Search Engine Optimisation (SEO)](https://github.com/RiyadhKh4n/portfolio-project-5#search-engine-optimisation-seo) section. The other marketing measures to be employed are explained below.
 
-(WEBSITE) is a small, one person business and its goals are to sell its crypto-related products online. The website users will be a mix of male/female as crypto is for everyone, as a result, we will accomodate for both male and female shoppers by offering unisex and gender specific items of clothing, with the estimated average age of users being 20 - 40. This age group are amongst users who use social media heavily, as a result, the most appropriate platform would be those with a more visual basis such as Instagram and Facebook as these are the most popular with the given age range. TikTok will not be used as its audience is mainly younger, however this can be revised in the future. As the business is new and does not have the budget for aggressive advertising, it will focus on organic growth through Social Media Marketing.
+cMarket is a small, one person business and its goals are to sell its crypto-related products online. The website users will be a mix of male/female as crypto is for everyone, as a result, we will accomodate for both male and female shoppers by offering unisex and gender specific items of clothing, with the estimated average age of users being 20 - 40. This age group are amongst users who use social media heavily, as a result, the most appropriate platform would be those with a more visual basis such as Instagram and Facebook as these are the most popular with the given age range. TikTok will not be used as its audience is mainly younger, however this can be revised in the future. As the business is new and does not have the budget for aggressive advertising, it will focus on organic growth through Social Media Marketing.
 
 A Facebook Business Page will be created which will promote the business, promote the products being sold and be a platform which advertising campaign can be held to help reach a wider audience. The content on the Facebook page can be reused on the other social channels and can include:
 
@@ -205,7 +208,7 @@ For ease of reading, the user stories around similar actions have been grouped i
 
 ## Development Method
 
-When developing (WEBSITE) I will take an Agile Approach. Meaning I will take an iterative approach to project management and software development helping me to deliver value faster and speed up development time. I will focus on working software over comprehensive documentation and responding to change over following a plan when creating the project.
+When developing cMarket I will take an Agile Approach. Meaning I will take an iterative approach to project management and software development helping me to deliver value faster and speed up development time. I will focus on working software over comprehensive documentation and responding to change over following a plan when creating the project.
 
 I also intergrated the MoSoCoW method which is a four-step approach to prioritizing which project requirements will provide the best return on investment (ROI). MoSCoW stands for Must- Have, Should-Have, Could-Have and Wont-Have. Using this method, I am able to label and order my User Stories into four categories, allowing me to know which ones to focus on and to ensure I meet my project vision and aims.
 
@@ -261,7 +264,7 @@ The data is organised using the following models:
 
     ### Project Structure
 
-    (WEBSITE) will be developed using Django, as a result I will split the program functionality into separate apps. A Django application is a Python package that is specifically inteded for use in a Django project. For my project I will create six apps; Home, Products, Bag, Profiles, Checkout and Wishlist.
+    cMarket will be developed using Django, as a result I will split the program functionality into separate apps. A Django application is a Python package that is specifically inteded for use in a Django project. For my project I will create six apps; Home, Products, Bag, Profiles, Checkout and Wishlist.
 
     Home:
     - To display the Home page (index.html)
