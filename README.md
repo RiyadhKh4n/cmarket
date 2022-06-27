@@ -4,7 +4,7 @@ cMarket is an E-Commerce site where customers can go to purchase cryptocurrency 
 
 cMarket is a Full-Stack application built with the Django framework which includes full CRUD functionality allowing users to Sign Up / Log In to their account as well as viewing all products, adding items to their bag and wishlist and having full payment functionality through Stripe.
 
-[cMarket - Deployed Site]()
+[Deployed Site]()
 
 ---
 
