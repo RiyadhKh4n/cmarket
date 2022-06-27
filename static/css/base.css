@@ -106,6 +106,6 @@ tr > th,
     border: 1px solid white;
 }
 
-.update-link, .remove-link{
+.update-link, .remove-item{
     cursor: pointer;
 }
