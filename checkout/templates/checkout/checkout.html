@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
-
+{% load bag_tools %}
 
 {% block extra_css %}
 <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
@@ -32,10 +32,10 @@
                 </div>
             </div>
             <!-- 2nd row loop through bag items, display image, name, qty, subtotal -->
-            {% for item in cart_items %}
+            {% for item in bag_items %}
             <div class="row">
                 <div class="col-2 mb-1">
-                    <a href="{% url 'product_details' item.product.id %}">
+                    <a href="{% url 'product_detail' item.product.id %}">
                         {% if item.product.image %}
                         <img class="w-100" src="{{ item.product.image.url }}" alt="Photo of {{ item.product.name }}">
                         {% else %}
@@ -49,7 +49,7 @@
                     <p class="my-0 small text-muted">Qty: {{ item.quantity }}</p>
                 </div>
                 <div class="col-3 text-right">
-                    <p class="my-0 small">lol</p>
+                    <p class="my-0 small">{{ item.product.price | calc_subtotal:item.quantity }}</p>
                 </div>
             </div>
             {% endfor %}
@@ -88,26 +88,25 @@
                     an account</a> to save delivery information and make the checkout process faster next time.
             </p>
             {% endif %}
-            <p><em>Fields marked with * must be completed.</em></p>
-            <form action="#" method="POST" id="payment-form" class="brand-form">
+            <form action="{% url 'checkout' %}" method="POST" id="payment-form" class="brand-form">
                 {% csrf_token %}
                 <!-- form fields grouped into 3 fieldsets -->
                 <!-- 1st fieldset - Personal details - form fields rendered with crispy forms -->
                 <fieldset>
                     <legend class="fieldset-label px-2 w-auto mb-0">Your Details</legend>
-                    {{ order_form.full_name }}
-                    {{ order_form.email }}
-                    {{ order_form.phone_number }}
+                    {{ order_form.full_name | as_crispy_field }}
+                    {{ order_form.email | as_crispy_field }}
+                    {{ order_form.phone_number| as_crispy_field  }}
                 </fieldset>
                 <!-- 2nd fieldset - Delivery details - form fields rendered with crispy forms -->
                 <fieldset>
                     <legend class="fieldset-label px-2 w-auto">Delivery Details</legend>
-                    {{ order_form.street_address1 }}
-                    {{ order_form.street_address2 }}
-                    {{ order_form.town_or_city }}
-                    {{ order_form.county }}
-                    {{ order_form.postcode }}
-                    {{ order_form.country }}
+                    {{ order_form.street_address1 | as_crispy_field }}
+                    {{ order_form.street_address2 | as_crispy_field  }}
+                    {{ order_form.town_or_city | as_crispy_field }}
+                    {{ order_form.county | as_crispy_field }}
+                    {{ order_form.postcode | as_crispy_field }}
+                    {{ order_form.country | as_crispy_field }}
                     <!-- Save Info section -->
                     <div class="form-check form-check-inline float-right mr-0">
                         {% if user.is_authenticated %}
@@ -145,7 +144,7 @@
                     </button>
                     <!-- notification that the card will be charged the amount once submitted -->
                     <p class="small fw-600 mt-2">Your card will be charged
-                        <strong>€{{ grand_total|floatformat:2 }}</strong></p>
+                        <strong>£{{ grand_total|floatformat:2 }}</strong></p>
                 </div>
             </form>
         </div>
