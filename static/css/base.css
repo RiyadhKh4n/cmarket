@@ -197,3 +197,28 @@ tr > th,
     border-color: #dc3545;
     border-radius: 0;
 }
+
+/* Product Page */
+
+.shop-filter {
+    background: #373b46;
+    padding: 26px;
+    margin-right: 40px;
+    border-radius: 10px;
+    min-width: 260px;
+    height: fit-content;
+}
+
+.shop-filter-heading  { 
+    margin-top: 0;
+    margin-bottom: 24px;
+    font-size: 1.375rem;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.filtering-option {
+    height: 100%;
+} 
