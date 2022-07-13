@@ -24,57 +24,49 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-12 col-md-3">
+            <div class="col-12 col-md-3 col-sm-none">
                 <div class="shop-filter">
-                    <h4 class="shop-filter-heading">Filter</h4>
+                    <h3 class="shop-filter-heading">Filter</h3>
                     <div class="filtering-option">
-                        <section class="gender-options">
+
+                        <li class="filter-li">
                             <h5>Gender</h5>
-                            <input type="radio" id="show-all" name="gender">
-                            <label for="show-all">Show All</label><br>
-                            <input type="radio" id="male" name="gender">
-                            <label for="male">Male</label><br>  
-                            <input type="radio" id="female" name="gender">
-                            <label for="female">Female</label><br>
-                            <input type="radio" id="unisex" name="gender">
-                            <label for="unisex">Unisex</label>
-                        </section>
+                            <div class="border-0 filtering-div" aria-labelledby="clothing-link">
+                                <a href="{% url 'products' %}?category=men" class="">Men</a>
+                                <a href="{% url 'products' %}?category=women" class="">Women</a>
+                                <a href="{% url 'products' %}?category=unisex" class="">Unisex</a>
+                            </div>
+                        </li>
 
                         <hr> 
 
-                        <section class="product-type">
+                        <li class="filter-li">
                             <h5>Product Type</h5>
-                            <input type="radio" id="Hat" name="Hat">
-                            <label for="Hat">Hat</label><br>
-                            <input type="radio" id="Hoodie" name="Hoodie">
-                            <label for="Hoodie">Hoodie</label><br>  
-                            <input type="radio" id="T-Shirt" name="t-shirt">
-                            <label for="T-Shirt">T-Shirt</label><br>
-                            <input type="radio" id="Sweatshirt" name="sweatshirt">
-                            <label for="Sweatshirt">Sweatshirt</label><br>
-                            <input type="radio" id="shorts" name="shorts">
-                            <label for="shorts">Shorts</label><br>
-                            <input type="radio" id="accessories" name="accessories">
-                            <label for="accessories">Accessories</label><br>
-                        </section>
+                            <div class="border-0 filtering-div" aria-labelledby="clothing-link">
+                                <a href="{% url 'products' %}?category=hoodies" class="">Hoodies</a>
+                                <a href="{% url 'products' %}?category=tshirt" class="">T-Shirt</a>
+                                <a href="{% url 'products' %}?category=jumpers" class="">Jumpers</a>
+                                <a href="{% url 'products' %}?category=accessories" class="">Accessories</a>
+                            </div>
+                        </li>
                         
                         <hr> 
 
-                        <section class="size">
+                        <!-- <section class="size">
                             <h5>Size</h5>
                             <input type="radio" id="show-all" name="gender">
                             <label for="show-all">Show All</label><br>
                             <input type="radio" id="xs" name="xs">
                             <label for="xs">XS</label><br>  
                             <input type="radio" id="s" name="s">
-                            <label for="s"></label><br>
+                            <label for="s">S</label><br>
                             <input type="radio" id="m" name="m">
                             <label for="m">M</label><br>
                             <input type="radio" id="l" name="l">
                             <label for="L">L</label><br>
                             <input type="radio" id="xl" name="xl">
                             <label for="xl">XL</label><br>
-                        </section>
+                        </section> -->
                     </div>
                 </div>
             </div>
