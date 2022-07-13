@@ -37,6 +37,9 @@
   </head>
     
   <body>
+
+    <!-- Navigation -->
+
     <nav class="navbar navbar-expand-lg">
       <a class="navbar-brand logo" href="{% url 'home' %}">cMarket</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -112,6 +115,45 @@
             </div>
         </nav>
 
+        <main class="flex-shrink-0 main-bg">
+            {% block content %}
+            <!-- Homepage Content Goes Here -->
+            {% endblock content %}
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer-class">
+            <div class="row footer-row">
+                <div class="col ">
+                    <h3>cMarket</h3>
+                    <p class="footer-p">
+                        Welcome to The cMarket store - your one-stop shop for all things cryptocurrency related. We have an ever expanding range of items to suit all your crypto needs.
+                    </p>
+                    <p class="">Cryptics © 2022 - All Rights Reserved ~ Riyadh Khan </p>
+                </div>
+                <div class="col links-col">
+                    <ul class="footer-ul">
+                        <li><a href="{% url 'home' %}">Home</a></li>
+                        <li><a href="">Shop</a></li>
+                        <li><a href="">Privacy</a></li>
+                        <li><a href="">Shipping</a></li>
+                    </ul>
+                </div>
+                <div class="col links-col">
+                    <ul class="footer-ul">
+                        <li><a href="">Terms & Conditions</a></li>
+                        <li><a href="{% url 'account_login' %}">Login</a></li>
+                        <li><a href="{% url 'account_signup' %}">Register</a></li>
+                        <li><a href="">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h3>Newsletter </h3>
+                    <h6 class="text-uppercase">Subscribe to our newsletter</h6>
+                </div>
+            </div>
+        </footer>
+
 
         {% if messages %}
         <div class="message-container">
@@ -132,8 +174,6 @@
     {% endif %}
 
     {% block page_header %}{% endblock %}
-
-    {% block content %}{% endblock %}
 
     {% block postloadjs %}
     <script type="text/javascript">
