@@ -83,11 +83,43 @@ li > a > div > p{
 .add-to-bag-form{
     border-radius: 20px;
     background: #373b46;
+    padding: 20px;
+}
+
+.product-price {
+    font-size: 2em;
+}
+
+.fa-minus, .fa-plus, .fa-heart {
+    color: #fff;
 }
 
 .add-to-cart-btn{
-    border: 1px solid #fff;
-    color: #fff;
+    padding: 10px;
+    background-color: rgb(106,90,205);
+    box-shadow: 0 5px 0 rgba(106,90,205, 0.5);
+    transition: transform 0.05s ease-out; 
+}
+
+.add-to-cart-btn:active {
+    box-shadow: none;
+    transform: translateY(10px);
+}
+
+.add-to-cart-btn:hover {
+    color: white;
+}
+
+.wishlist-div {
+    margin-top: 20px;
+    padding-left: 0;
+}
+
+.fa-heart {
+    width: fit-content;
+    padding: 10px;
+    border-radius: 50%;
+    border: 2px solid #fff;
 }
 
 /* Bag */
@@ -141,39 +173,6 @@ tr > th,
     height: 100px;
     overflow-x: hidden;
     overflow-y: auto;
-}
-
-/* Convenience classes - colors copied from Bootstrap */
-.arrow-primary {
-    border-bottom-color: #007bff !important;
-}
-
-.arrow-secondary {
-    border-bottom-color: #6c757d !important;
-}
-
-.arrow-success {
-    border-bottom-color: #28a745 !important;
-}
-
-.arrow-danger {
-    border-bottom-color: #dc3545 !important;
-}
-
-.arrow-warning {
-    border-bottom-color: #ffc107 !important;
-}
-
-.arrow-info {
-    border-bottom-color: #17a2b8 !important;
-}
-
-.arrow-light {
-    border-bottom-color: #f8f9fa !important;
-}
-
-.arrow-dark {
-    border-bottom-color: #343a40 !important;
 }
 
 /* Product Form */
@@ -242,6 +241,11 @@ tr > th,
 .filtering-div > a:hover {
     border-bottom: 1px solid white;
     width: fit-content;
+}
+
+/* Auth */ 
+
+.auth-container {
 }
 
 /* Footer */
