@@ -17,8 +17,9 @@ class Newsletter(models.Model):
 
 
 class ContactForm(models.Model):
-    """
-    Class that defines the ContactForm model
-    """
-    email = models.EmailField(max_length=254)
-    details = models.TextField()
+    email = models.EmailField()
+    subject = models.CharField(max_length=255, blank=True)
+    message = models.TextField()
+
+    def __str__(self):
+        return self.email
