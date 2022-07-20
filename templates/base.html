@@ -9,6 +9,9 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="cMarket is an e-commerce store for all cryptocurrency merchandise.">
+        <meta name="keywords" content="cMarket, crypto merch, cryptocurrency clothing, Coin Bureau,
+                                bitcoin tshirt, eth hoodie, exchange">
     {% endblock %}
 
     {% block extra_meta %}
@@ -135,13 +138,13 @@
                     <ul class="footer-ul">
                         <li><a href="{% url 'home' %}">Home</a></li>
                         <li><a href="">Shop</a></li>
-                        <li><a href="">Privacy</a></li>
+                        <li><a href="{% url 'privacy-policy'%}">Privacy</a></li>
                         <li><a href="">Shipping</a></li>
                     </ul>
                 </div>
                 <div class="col links-col">
                     <ul class="footer-ul">
-                        <li><a href="">Terms & Conditions</a></li>
+                        <li><a href="{% url 't&c' %}">Terms & Conditions</a></li>
                         <li><a href="{% url 'account_login' %}">Login</a></li>
                         <li><a href="{% url 'account_signup' %}">Register</a></li>
                         <li><a href="{% url 'contact' %}">Contact</a></li>

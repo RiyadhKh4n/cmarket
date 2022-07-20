@@ -12,6 +12,18 @@ def index(request):
     return render(request, 'home/index.html')
 
 
+def displayPrivacyPolicy(request):
+    """ A view to return the privacy page """
+
+    return render(request, 'home/privacy.html')
+
+
+def displayTermsConditions(request):
+    """ A view to return the T&Cs page """
+
+    return render(request, 'home/terms-and-conditions.html')
+
+
 def contact(request):
     """ A view to return the contact page """
     if request.method == 'POST':
@@ -41,3 +53,4 @@ def contact(request):
         form = ContactForm1()
     context = {'form': form}
     return render(request, 'home/contact.html', context)
+
