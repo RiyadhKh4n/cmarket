@@ -3,17 +3,16 @@ from django.contrib.auth.models import User
 
 
 class Newsletter(models.Model):
-    """
-    Class that defines the Newsletter model
-    """
-    email = models.EmailField(max_length=254, blank=False, null=False)
-    accepted_privacy_policy = models.BooleanField(default=False,
-                                                  blank=False, null=False)
-    registered_user = models.ForeignKey(
-                User, on_delete=models.SET_NULL, blank=True, null=True,
-                related_name='newsletter_subscriber')
-    created_on = models.DateTimeField(auto_now=True, editable=False)
-    updated_on = models.DateTimeField(auto_now=True, editable=False)
+    email = models.EmailField()
+    subscribed_on = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        """newsletter meta class"""
+        ordering = ['subscribed_on']
+        verbose_name_plural = 'Subscriptions'
+
+    def __str__(self):
+        return self.email
 
 
 class ContactForm(models.Model):

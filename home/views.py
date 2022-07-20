@@ -1,9 +1,10 @@
 from django.contrib import messages
 from django.shortcuts import render, redirect, reverse
 from django.core.mail import send_mail
+from django.template.loader import render_to_string
 from django.conf import settings
 
-from .forms import ContactForm1
+from .forms import ContactForm1, NewsletterForm
 
 
 def index(request):
@@ -54,3 +55,50 @@ def contact(request):
     context = {'form': form}
     return render(request, 'home/contact.html', context)
 
+
+def subscribe(request):
+    """ A view to show individual loppis details """
+    newsletter_form = NewsletterForm(data=request.POST)
+
+    if request.method == 'POST':
+        if newsletter_form.is_valid():
+            email = newsletter_form.cleaned_data.get("email")
+            if email:
+                messages.success(
+                    request, 'Successfully subscribed to our Newsletter!'
+                    )
+                subscriber_email = email 
+                subject = render_to_string(
+                        'home/confirmation_emails/confirmation_email_subject.txt',  # noqa
+                        {'email': email})
+                body = render_to_string(
+                        'home/confirmation_emails/confirmation_email_body.txt',  # noqa
+                        {
+                            'email': email,
+                            'subscriber_email': subscriber_email,
+                            'contact_email': settings.DEFAULT_FROM_EMAIL
+                        })
+                send_mail(
+                    subject,
+                    body,
+                    settings.DEFAULT_FROM_EMAIL,
+                    [subscriber_email]
+                )
+            else:
+                messages.error(
+                    request,
+                    'Unexpected error occcured, please try again!'
+                    )
+            newsletter_form.save()
+        else:
+            messages.error(
+                request,
+                'This email already exists!'
+                )
+            newsletter_form = NewsletterForm()
+
+    context = {
+        'newsletter_form': NewsletterForm(),
+    }
+
+    return render(request, 'subscription/subscribe.html', context)

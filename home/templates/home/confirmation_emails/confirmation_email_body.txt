@@ -1,0 +1,12 @@
+
+Thank you for subscribing to cMarket Newsletter. 
+
+This is a confirmation email for your subscription. 
+
+If you have any further questions, feel free to contact us at {{ contact_email }}.
+
+Thank you for choosing cMarket.
+
+Sincerely, 
+
+cMarket
