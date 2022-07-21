@@ -1,16 +1,21 @@
 from django.contrib import messages
-from django.shortcuts import render, redirect, reverse
+from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.core.mail import send_mail
 from django.template.loader import render_to_string
 from django.conf import settings
-
+from products.models import Product
 from .forms import ContactForm1, NewsletterForm
 
 
 def index(request):
     """ A view to return the index page """
+    products = Product.objects.filter(category=8)
 
-    return render(request, 'home/index.html')
+    context = {
+        'products': products,
+    }
+
+    return render(request, 'home/index.html', context)
 
 
 def displayPrivacyPolicy(request):
