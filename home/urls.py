@@ -8,4 +8,5 @@ urlpatterns = [
     path('contact/', views.contact, name='contact'),
     path('privacy-policy/', views.displayPrivacyPolicy, name='privacy-policy'),
     path('terms-conditions/', views.displayTermsConditions, name='t&c'),
+    path('newsletter/', views.subscribe, name='subscribe'),
 ]
