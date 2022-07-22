@@ -57,7 +57,7 @@
                             <div>
                                 <i class="fas fa-shopping-cart"></i>
                             </div>
-                            <p class="my-0">
+                            <p class="nav-items my-0">
                                 Shop
                             </p>
                         </div>
@@ -69,7 +69,7 @@
                             <div>
                                 <i class="fas fa-user fa-lg"></i>
                             </div>
-                            <p class="my-0">My Account</p>
+                            <p class="nav-items my-0">My Account</p>
                         </div>
                     </a>
                     <div class="dropdown-menu border-0" aria-labelledby="user-options">
@@ -92,7 +92,7 @@
                             <div>
                                 <i class="fas fa-shopping-bag fa-lg"></i>
                             </div>
-                            <p class="my-0">
+                            <p class="nav-items my-0">
                                 {% if grand_total %}
                                     £{{ grand_total|floatformat:2 }}
                                 {% else %}
@@ -128,11 +128,11 @@
         <footer class="footer-class">
             <div class="row footer-row">
                 <div class="col ">
-                    <h3>cMarket</h3>
+                    <h3 class="footer-title">cMarket</h3>
                     <p class="footer-p">
                         Welcome to The cMarket store - your one-stop shop for all things cryptocurrency related. We have an ever expanding range of items to suit all your crypto needs.
                     </p>
-                    <p class="">Cryptics © 2022 - All Rights Reserved ~ Riyadh Khan </p>
+                    <p class="footer-extra">Cryptics © 2022 - All Rights Reserved</p>
                 </div>
                 <div class="col links-col">
                     <ul class="footer-ul">
@@ -149,6 +149,24 @@
                         <li><a href="{% url 'account_login' %}">Login</a></li>
                         <li><a href="{% url 'contact' %}">Contact</a></li>
                     </ul>
+                </div>
+                <div class="col links-col">
+                    <h4 class="social-links">Social Links</h4>
+                    <div class="social-icons">
+                        <a href="https://github.com/RiyadhKh4n/" aria-label="Take a look at my GitHub" target="_blank">
+                            <i class="fab fa-github"></i>
+                        </a>
+    
+                        <a href="https://www.linkedin.com/in/riyadh-khan-49213519a/" aria-label="Take a look at my LinkedIn" target="_blank">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        
+                        <a href="#" aria-label="View cMarket Facebook Page" target="_blank">
+                            <i class="fab fa-brands fa-facebook-f"></i>
+
+                        </a>
+    
+                    </div>
                 </div>
             </div>
         </footer>
