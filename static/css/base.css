@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Righteous&display=swap');
+
 html,body {
     height: 100%;
 }
@@ -14,14 +16,20 @@ main {
 }
 
 /* Navbar */
-.navbar{
+.navbar {
     background-color: #24262b;
 }
 
-.logo{
+.logo {
+    font-family: 'Righteous', cursive;
     margin-left: 50px;
     font-size: 3em;
     color: #fff;
+}
+
+.nav-items {
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
 }
 
 li > a > div > div > i{
@@ -38,7 +46,7 @@ li > a > div > p{
 
 /* homepage */ 
 .jumbotron{
-    height: 30vh;
+    height: 40vh;
     background-color: #24262b;
     margin-bottom: 0;
 }
@@ -51,14 +59,33 @@ li > a > div > p{
     color: #fff;
 }
 
-.wrapper{
-    display: grid;
-    grid-template-columns: 2fr 3fr;
-    height: 30vh;   
+.homepage-title {
+    font-family: 'Righteous', cursive;
+    font-size: 2em;
 }
-.wrapper > div {
-    border: 1px solid red;
-    color: #fff
+
+.homepage-jumbo {
+    font-family: 'Lato', sans-serif;
+    font-size: 2.75em;
+    font-weight: 400;
+}
+
+.shop-now-btn{
+    padding: 20px;
+    background-color: rgb(106,90,205);
+    box-shadow: 0 7px 0 rgba(106,90,205, 0.5);
+    transition: transform 0.05s ease-out; 
+    font-weight: 600;
+    font-size: 1em;
+}
+
+.shop-now-btn:active {
+    box-shadow: none;
+    transform: translateY(10px);
+}
+
+.shop-now-btn:hover {
+    color: white;
 }
 
 
@@ -247,6 +274,8 @@ tr > th,
 /* Auth */ 
 
 .auth-container {
+    border: 1px solid red;
+    width: 75vw;
 }
 
 /* Footer */
@@ -303,7 +332,236 @@ tr > th,
     border-bottom: 1px solid #fff;
 }
 
+.social-icons a {
+    text-decoration: none;
+}
+
+.social-icons .fab {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 35px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-right: 15px;
+    background-color: #fff;
+    color: rgb(106,90,205);
+}
+
+
 /* Media Queries */
+@media only screen and (max-width: 320px) {
+    .logo {
+        font-family: 'Righteous', cursive;
+        margin-left: 0px;
+        font-size: 2.5em;
+        color: #fff;
+    }
+
+    .jumbotron{
+        height: 30vh;
+    }
+
+    .homepage-title {
+        font-family: 'Righteous', cursive;
+        font-size: 1.25em;
+    }
+    
+    .homepage-jumbo {
+        font-family: 'Lato', sans-serif;
+        font-size: 1.5em;
+        font-weight: 400;
+    }
+
+    .shop-now-btn{
+        padding: 15px;
+        font-weight: 600;
+        font-size: 1em;
+    }
+
+    .shop-filter {
+        padding-left: 0;
+        font-family: 'Righteous', cursive;
+        font-weight: 300;
+        letter-spacing: 1px;
+    }
+           
+    .footer-p {
+        text-align: justify;
+        font-family: 'Lato', sans-serif;
+        font-size: 1.05em;
+        line-height: 15px;
+        letter-spacing: 1px;
+    }
+
+    .col h3 {
+        font-family: 'Righteous', cursive;
+        font-weight: 700;
+        letter-spacing: 2px;
+    }
+
+    .footer-p {
+        font-family: 'Lato', sans-serif;
+        font-size: 1em;
+        line-height: 15px;
+        letter-spacing: 1px;
+    }
+
+    .footer-extra {
+        font-family: 'Lato', sans-serif;
+        font-size: 14px;
+    }
+
+    .footer-ul > li > a {
+        font-family: 'Lato', sans-serif;
+        font-size: 16px;
+    }
+
+    .social-links {
+        font-family: 'Righteous', cursive;
+        letter-spacing: 1.2px;
+        font-size: 20px;
+    }
+  
+}
+
+@media only screen and (max-width: 375px) {
+    .logo {
+        font-family: 'Righteous', cursive;
+        margin-left: 0px;
+        font-size: 3em;
+        color: #fff;
+    }
+
+    .jumbotron{
+        height: 30vh;
+    }
+
+    .homepage-title {
+        font-family: 'Righteous', cursive;
+        font-size: 1.5em;
+    }
+    
+    .homepage-jumbo {
+        font-family: 'Lato', sans-serif;
+        font-size: 1.75em;
+        font-weight: 400;
+    }
+
+    .shop-now-btn{
+        padding: 15px;
+        font-weight: 600;
+        font-size: 1em;
+    }
+
+    .shop-filter {
+        padding-left: 0;
+        font-family: 'Righteous', cursive;
+        font-weight: 300;
+        letter-spacing: 1px;
+    }
+
+    .footer-p {
+        text-align: justify;
+        font-family: 'Lato', sans-serif;
+        font-size: 1.05em;
+        line-height: 15px;
+        letter-spacing: 1px;
+    }
+
+    .col h3 {
+        font-family: 'Righteous', cursive;
+        font-weight: 700;
+        letter-spacing: 2px;
+    }
+
+    .footer-p {
+        font-family: 'Lato', sans-serif;
+        font-size: 1em;
+        line-height: 15px;
+        letter-spacing: 1px;
+    }
+
+    .footer-extra {
+        font-family: 'Lato', sans-serif;
+        font-size: 14px;
+    }
+
+    .footer-ul > li > a {
+        font-family: 'Lato', sans-serif;
+        font-size: 16px;
+    }
+
+    .social-links {
+        font-family: 'Righteous', cursive;
+        letter-spacing: 1.2px;
+        font-size: 20px;
+    }
+  
+}
+
+@media only screen and (max-width: 425px) {
+    .logo {
+        margin-left: 0px;
+        font-size: 4em;
+    }
+
+    .homepage-title {
+        font-size: 1.5em;
+    }
+    
+    .homepage-jumbo {
+        font-family: 'Lato', sans-serif;
+        font-size: 1.75em;
+        font-weight: 400;
+    }
+
+    .shop-now-btn{
+        padding: 15px;
+        font-weight: 600;
+        font-size: 1.2em;
+    }
+
+    .shop-filter {
+        padding-left: 0;
+        font-weight: 300;
+    }
+           
+    .col h3 {
+        font-family: 'Righteous', cursive;
+        font-weight: 700;
+        font-size: 2.2em;
+        letter-spacing: 1px;
+    }
+
+    .footer-p {
+        font-family: 'Lato', sans-serif;
+        font-size: 1.2em;
+        line-height: 20px;
+        letter-spacing: 1px;
+    }
+
+    .footer-extra {
+        font-family: 'Lato', sans-serif;
+        font-size: 16px;
+    }
+
+    .footer-ul > li > a {
+        font-family: 'Lato', sans-serif;
+        font-size: 18px;
+    }
+
+    .social-links {
+        font-family: 'Righteous', cursive;
+        letter-spacing: 1.2px;
+        font-size: 20px;
+    }
+  
+  
+}
+
+
 @media (max-width: 700px) {
     .footer-class {
         bottom: unset;
