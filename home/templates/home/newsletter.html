@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="overlay"></div>
+    <div class="container mb-2">
+        <div class="row">
+            <div class="col-12 col-md-6">
+                <hr>
+                <h2 class="text-heading mb-4">Subscribe to our Newsletter</h2>
+                <hr>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12 col-md-6">
+                <p>Don't miss our exclusive cMarket Drops! Be the first one to know.</p>
+                <p class="text-muted">By subscribing to our newsletter, 
+                    you will be informed about our future drops and the latest deals! </p>
+                <form method="POST" class="mb-2">
+                    <p class="text-light">Email:</p>
+                    {% csrf_token %}
+                    {{ newsletter_form | crispy }}
+                    <p><button type="submit" class="btn btn-light">Subscribe</button></p>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}
