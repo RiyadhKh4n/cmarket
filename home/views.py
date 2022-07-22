@@ -106,4 +106,4 @@ def subscribe(request):
         'newsletter_form': NewsletterForm(),
     }
 
-    return render(request, 'subscription/subscribe.html', context)
+    return render(request, 'home/newsletter.html', context)
