@@ -36,7 +36,7 @@ li > a > div > p{
     color:#fff;
 }
 
-/* index.html */ 
+/* homepage */ 
 .jumbotron{
     height: 30vh;
     background-color: #24262b;
@@ -60,6 +60,7 @@ li > a > div > p{
     border: 1px solid red;
     color: #fff
 }
+
 
 /* Products Page */
 .overlay{
