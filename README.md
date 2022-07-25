@@ -330,7 +330,9 @@ The data is organised using the following models:
  
 Here describes the main features of the website and what the user can expect when viewing ~
  
-## Existing Features:
+## Current Features:
+
+
 
 ## Future Features:
 
