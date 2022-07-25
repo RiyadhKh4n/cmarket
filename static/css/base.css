@@ -341,6 +341,24 @@ tr > th,
     font-family: 'Lato', sans-serif;
 }
 
+/* Extra Pages */
+
+.extra-info-container > .row > h1,
+.extra-info-container > .row > h2 {
+    font-family: 'Righteous', cursive; 
+    letter-spacing: 1px;
+}
+
+.extra-info-container > .row > p {
+    font-family: 'Lato', sans-serif;
+    text-align: justify;
+}
+
+.contact-title {
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
+}
+
 /* Footer */
 
 .footer-class {
@@ -424,19 +442,18 @@ tr > th,
 
     .burger-menu {
         background-color: white;
-        margin-right: 10px;
-        padding: 8px;
+        margin-right: 5px;
+        padding: 6px;
     }
 
     .list-inline-item > a {
-        font-size: 16px;
+        font-size: 14px;
         padding: 0 5px;
     }
 
     .dropdown-menu {
         font-size: 13px;
     }
-
 
     .jumbotron{
         height: 50vh;
@@ -516,6 +533,18 @@ tr > th,
     .keep-shopping, .secure-checkout {
         font-size: 12px
     }
+
+    .extra-info-container > .row > h1 {
+        font-size: 24px;
+    }
+
+    .extra-info-container > .row > h2 {
+        font-size: 22px;
+    }
+
+    .extra-info-container > .row > p {
+        font-size: 18px;
+    }
      
 }
 
@@ -529,12 +558,12 @@ tr > th,
 
     .burger-menu {
         background-color: white;
-        margin-right: 10px;
+        margin-right: 5px;
         padding: 10px;
     }
 
     .list-inline-item > a {
-        font-size: 18px;
+        font-size: 16px;
         padding: 0 10px;
     }
 
@@ -677,7 +706,7 @@ tr > th,
 @media only screen and (min-width: 768px) {
     .logo {
         margin-left: 25px;
-        font-size: 3.5em;
+        font-size: 3em;
     }
 
     .homepage-title {
@@ -742,16 +771,28 @@ tr > th,
     .keep-shopping, .secure-checkout {
         font-size: 18px
     }
+
+    .extra-info-container > .row > h1 {
+        font-size: 28px;
+    }
+
+    .extra-info-container > .row > h2 {
+        font-size: 24px;
+    }
+
+    .extra-info-container > .row > p {
+        font-size: 20px;
+    }
 }
 
 @media only screen and (min-width: 1024px) {
     .logo {
         margin-left: 25px;
-        font-size: 4em;
+        font-size: 3.5em;
     }
 
     .nav-items {
-        font-size: 1.25em;
+        font-size: 1em;
     }
 
     .fa-shopping-cart, .fa-user, .fa-shopping-bag {
@@ -800,15 +841,27 @@ tr > th,
         margin-top: 50px;
     }
 
+    .extra-info-container > .row > h1 {
+        font-size: 40px;
+    }
+
+    .extra-info-container > .row > h2 {
+        font-size: 28px;
+    }
+
+    .extra-info-container > .row > p {
+        font-size: 24px;
+    }
+
 }
 
 @media only screen and (min-width: 1440px) {
     .logo {
-        font-size: 4em;
+        font-size: 3.5em;
     }
 
     .nav-items {
-        font-size: 1.5em;
+        font-size: 1em;
     }
 
     .homepage-title {
