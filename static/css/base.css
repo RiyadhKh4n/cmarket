@@ -27,7 +27,7 @@ main {
     color: #fff;
 }
 
-.nav-items {
+.nav-items, .pm-title, .wishlist {
     font-family: 'Lato', sans-serif;
     font-weight: 700;
 }
@@ -35,7 +35,8 @@ main {
 .logo:hover, .nav-items:hover, .fa-shopping-cart:hover,
 .fa-user:hover, .fa-shopping-bag:hover,
 .secure-checkout:hover, .keep-shopping:hover,
-.adjust-bag:hover, .complete-order:hover  {
+.adjust-bag:hover, .complete-order:hover, .cancel-btn:hover,
+.pm-btn:hover  {
     color:rgb(106,90,205);
 }
 
@@ -608,7 +609,7 @@ tr > th,
 @media only screen and (min-width: 425px) {
     .logo {
         margin-left: 0px;
-        font-size: 4em;
+        font-size: 3.5em;
     }
     
     .burger-menu {
@@ -676,7 +677,7 @@ tr > th,
 @media only screen and (min-width: 768px) {
     .logo {
         margin-left: 25px;
-        font-size: 4.5em;
+        font-size: 3.5em;
     }
 
     .homepage-title {
@@ -746,7 +747,7 @@ tr > th,
 @media only screen and (min-width: 1024px) {
     .logo {
         margin-left: 25px;
-        font-size: 4.5em;
+        font-size: 4em;
     }
 
     .nav-items {
@@ -803,7 +804,7 @@ tr > th,
 
 @media only screen and (min-width: 1440px) {
     .logo {
-        font-size: 5em;
+        font-size: 4em;
     }
 
     .nav-items {
