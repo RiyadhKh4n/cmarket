@@ -310,10 +310,13 @@ The data is organised using the following models:
 
 * ### Colour Scheme
 
-    ![ColorSpace]()
+    When designing cMarket I wanted to ensure the colour scheme of my site was visually appealing, I used the [Coin Bureau Shop](https://store.coinbureau.com/shop/) to get the colour scheme for their site and implemented them into my own, as I liked the dark theme of their shop. 
+
+    As a result, the main two colours used in the site are #24262b which is used for the majority of the site and #373b46 which is used for the product cards. For the sites accents I used rgb(106,90,205) which contrasts the dark-grey quite nicely and adds a nice pop of colour to the site without taking away from the dark theme.
 
 * ### Typography
 
+    When considering the typography of the site, I wanted to use fonts that were readable, professional and easy on the eye. As a result, for the main headings I went with [Righteous](https://fonts.google.com/specimen/Righteous?query=Righteous). For all other text on the website I went with [Lato](https://fonts.google.com/specimen/Lato?query=Lato) as I feel that is compliments Righteous nicely and conforms to the three points I set out when chosing the typography for cMarket.
 
 * ### Icons
 
