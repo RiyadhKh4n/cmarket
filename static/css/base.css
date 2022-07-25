@@ -27,16 +27,19 @@ main {
     color: #fff;
 }
 
-.logo:hover {
+/* .logo:hover {
     color:rgb(106,90,205);
-}
+} */
 
 .nav-items {
     font-family: 'Lato', sans-serif;
     font-weight: 700;
 }
 
-.nav-items:hover, .fa-shopping-cart:hover, .fa-user:hover, .fa-shopping-bag:hover  {
+.logo:hover, .nav-items:hover, .fa-shopping-cart:hover,
+.fa-user:hover, .fa-shopping-bag:hover,
+.secure-checkout:hover, .keep-shopping:hover,
+.adjust-bag:hover, .complete-order:hover  {
     color:rgb(106,90,205);
 }
 
@@ -120,10 +123,6 @@ li > a > div > p{
     border-radius: 20px;
     background: #373b46;
     padding: 20px;
-}
-
-.product-price {
-    font-size: 2em;
 }
 
 .fa-minus, .fa-plus, .fa-heart {
@@ -241,17 +240,23 @@ tr > th,
 
 /* Product Page */
 
+.products-h2 {
+    font-family: 'Righteous', cursive;
+    letter-spacing: 1px;
+}
+
 .shop-filter {
     background: #373b46;
     padding: 26px;
-    margin-right: 40px;
+    margin-right: 4px;
     border-radius: 10px;
     min-width: 260px;
 }
 
 .shop-filter-heading  { 
+    font-family: 'Lato', sans-serif;
     margin-top: 0;
-    font-size: 1.475rem;
+    font-size: 1.5rem;
     font-weight: 600;
     display: flex;
     justify-content: space-between;
@@ -268,7 +273,12 @@ tr > th,
     list-style-type: none;
 }
 
-.filtering-div > a{
+.filter-li > h5 {
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
+}
+
+.filtering-div > a {
     display: block;
     text-decoration: none;
     color: white;
@@ -279,11 +289,57 @@ tr > th,
     width: fit-content;
 }
 
+.product-name {
+    font-family: 'Lato', sans-serif;
+    color: white;
+    font-weight: 600;
+}
+
+.product-details-product-name {
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+}
+
+.product-rating {
+    font-size: 14px;
+}
+
+.product-description {
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+}
+
+.product-price {
+    font-family: 'Righteous', cursive;
+    font-size: 1.6em;
+}
+
+.size-col {
+    padding-left: 0px;
+}
+
+.product-qty, .product-size {
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+}
+
+
 /* Auth */ 
 
 .auth-container {
     border: 1px solid red;
     width: 75vw;
+}
+
+/* Bag */
+
+.shopping-bag-h2 {
+    font-family: 'Righteous', cursive;
+}
+
+.bag-total, .grand-total, .delivery-msg {
+    font-family: 'Lato', sans-serif;
 }
 
 /* Footer */
@@ -392,7 +448,19 @@ tr > th,
         margin-right: 0px;
         margin-bottom: 10px;
     }
-           
+
+    .product-details-product-name {
+        font-size: 20px;
+    }
+
+    .product-description {
+        font-size: 16px;
+    }
+
+    .prodouct-price {
+        font-size: 1.6em;
+    }
+    
     .footer-p {
         text-align: justify;
         font-family: 'Lato', sans-serif;
@@ -429,7 +497,11 @@ tr > th,
         letter-spacing: 1.2px;
         font-size: 20px;
     }
-  
+
+    .keep-shopping, .secure-checkout {
+        font-size: 12px
+    }
+     
 }
 
 @media only screen and (min-width: 375px) {
@@ -497,6 +569,10 @@ tr > th,
         letter-spacing: 1.2px;
         font-size: 20px;
     }
+
+    .keep-shopping, .secure-checkout {
+        font-size: 14px
+    }
   
 }
 
@@ -551,6 +627,10 @@ tr > th,
         letter-spacing: 1.2px;
         font-size: 20px;
     }
+
+    .keep-shopping, .secure-checkout {
+        font-size: 16px
+    }
 }
 
 @media only screen and (min-width: 768px) {
@@ -578,7 +658,7 @@ tr > th,
         font-weight: 600;
         font-size: 1.4em;
     }
-           
+         
     .col h3 {
         font-family: 'Righteous', cursive;
         font-weight: 700;
@@ -616,6 +696,10 @@ tr > th,
     .col:nth-child(2),
     .col:nth-child(3) {
         margin-top: 50px;
+    }
+
+    .keep-shopping, .secure-checkout {
+        font-size: 18px
     }
 }
 
@@ -686,8 +770,6 @@ tr > th,
     .nav-items {
         font-size: 1.25em;
     }
-
- 
 
     .homepage-title {
         font-size: 2em;
