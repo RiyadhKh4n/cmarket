@@ -45,10 +45,7 @@
 
     <nav class="navbar navbar-expand-lg">
       <a class="navbar-brand logo" href="{% url 'home' %}">cMarket</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
+    
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="list-inline-item">
@@ -116,6 +113,16 @@
                     </div>
                 </form>
             </div>
+
+            <div class="row d-lg-none">
+                <nav class="navbar navbar-expand-lg navbar-light w-100">
+                    <button class="d-lg-none navbar-toggler burger-menu" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    {% include 'includes/mobile-top-header.html' %}
+                    {% include 'includes/main-nav.html' %}
+                </nav>
+            </div>
         </nav>
 
         <main class="flex-shrink-0 main-bg">
@@ -130,7 +137,7 @@
                 <div class="col ">
                     <h3 class="footer-title">cMarket</h3>
                     <p class="footer-p">
-                        Welcome to The cMarket store - your one-stop shop for all things cryptocurrency related. We have an ever expanding range of items to suit all your crypto needs.
+                        Welcome to cMarket - your one-stop shop for all things cryptocurrency related. We have an ever expanding range of items to suit all your crypto needs.
                     </p>
                     <p class="footer-extra">cMarket © 2022 - All Rights Reserved</p>
                 </div>
