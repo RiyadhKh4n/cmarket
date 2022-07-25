@@ -249,7 +249,6 @@ tr > th,
     padding: 26px;
     margin-right: 4px;
     border-radius: 10px;
-    min-width: 260px;
 }
 
 .shop-filter-heading  { 
@@ -433,6 +432,11 @@ tr > th,
         padding: 0 5px;
     }
 
+    .dropdown-menu {
+        font-size: 13px;
+    }
+
+
     .jumbotron{
         height: 50vh;
     }
@@ -531,6 +535,10 @@ tr > th,
     .list-inline-item > a {
         font-size: 18px;
         padding: 0 10px;
+    }
+
+    .dropdown-menu {
+        font-size: 15px;
     }
 
     .jumbotron{
