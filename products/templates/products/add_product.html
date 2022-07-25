@@ -16,7 +16,7 @@
         <div class="row">
             <div class="col-12 col-md-6">
                 <hr>
-                <h2 class="logo-font mb-4">Product Management</h2>
+                <h2 class="pm-title mb-4">Product Management</h2>
                 <h5 class="text-muted">Add a Product</h5>
                 <hr>
             </div>
@@ -34,8 +34,8 @@
                         {% endif %}
                     {% endfor %}
                     <div class="text-right">
-                        <a class="btn font-white rounded-0" href="{% url 'products' %}">Cancel</a>
-                        <button class="btn font-white rounded-0" type="submit">Add Product</button>
+                        <a class="cancel-btn btn font-white rounded-0" href="{% url 'products' %}">Cancel</a>
+                        <button class="pm-btn btn font-white rounded-0" type="submit">Add Product</button>
                     </div>
                 </form>
             </div>            
