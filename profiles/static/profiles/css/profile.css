@@ -23,3 +23,10 @@ td{
 #id_default_country option:first-child {
     color: #aab7c4;
 }
+
+/* Media Queries */
+@media only screen and (min-width: 320px) {
+    .order-history-div {
+        margin-top: 15px;
+    }
+}
