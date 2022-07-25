@@ -424,25 +424,22 @@ I used GitHub [Project Boards](https://github.com/RiyadhKh4n/portfolio-project-5
 12. [SmartDraw](https://www.smartdraw.com/): 
     * Used to create ERD diagrams
 
-13. [ColorSpace](https://mycolor.space/):
-    * Used to find the colour scheme of the site
-
-14. [W3C Markup Validation Service](https://validator.w3.org/):
+13. [W3C Markup Validation Service](https://validator.w3.org/):
     * Used to validate HTML code
 
-15. [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/):
+14. [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/):
     * Used to validate CSS
 
-16. [JSHint](https://jshint.com/):
+15. [JSHint](https://jshint.com/):
     * Used to validate any JavaScript code used
 
-17. [Stripe](https://stripe.com/gb):
+16. [Stripe](https://stripe.com/gb):
     * Used to handle payments (currently only set up to handle test payments)
 
-18. [Gmail](https://mail.google.com/):
+17. [Gmail](https://mail.google.com/):
     * Used to send emails
 
-19. [Facebook](https://www.facebook.com/):
+18. [Facebook](https://www.facebook.com/):
     * Used to created the Facebook Business page
 
 # Testing
@@ -595,22 +592,167 @@ Repeat steps 8, 9 and 10 throughout development as you create further apps withi
 
 5. In Heroku, Click the Open app (or View button if still in the Deploy tab in Heroku) to view the app – it opens in a new window. For the initial deployment the static and media files have not been used but the database information should be there.
 
+**To add AWS for hosting static and media files:**
+
+If you don't have an account, create one, if you do, log in.
+
+#### Create Bucket to Store the Files:
+
+1. From services, go to S3 and Buckets, and Create bucket
+
+2. Type in the name of the bucket (keep it similar to project name to avoid confusion), select the region, uncheck 'block all public access' (it needs to be public to access the static files) and Create the bucket
+
+3. Go to Properties tab, scroll down to 'Static website hosting', click Edit. Select 'Host a static website', fill in default index.html and error.html (we won't be using these) and press Save
+
+4. Then go to the Permissions tab and scroll down to 'Cross-origin resource sharing (CORS)'. Click Edit and paste in the following: ```[ { "AllowedHeaders": [ "Authorization" ], "AllowedMethods": [ "GET" ], "AllowedOrigins": [ "*" ], "ExposeHeaders": [] } ]```
+
+5. Still in Permissions, scroll to the 'Bucket policy' section and select 'Policy generator' (opens in a new tab). In the Policy Type, select 'S3 Bucket Policy'. In Principal, type in * (to all all). In the Action dropdown, select 'Get Object'. And in Amazon Resources Name (ARN), paste in the code from the other tab, it will look like: ```arn:aws:s3::your-bucket-name```. Then click 'Add Statement'. Then click 'Generate Policy'. Copy the code in the 'Policy JSON Document' and paste it into the Bucket policy editor window in the other tab. Before pressing save, add ```/*``` onto the end of the bucket ARN in the Resource key (this is to allow access to all resources in the bucket). Then click Save.
+
+#### Create a User to access the Bucket:
+
+1. From services, go to IAM and User groups, and Create group
+
+2. Give the group a name (e.g. ```manage-c-market``` so it is clear it's related to this project and the bucket created earlier), click Create Group
+Create the policy that will be used to access the bucket. In Permissions. click on 'Add permissions' and then 'Create inline policy'. Go to the JSON tab and click on 'Import managed policies'. In the search box, type in S3, then from the resulting list select 'AmazonS3FullAccess' and press Import. In the JSON box, update the "Resource" key so that we allow access to just the bucket and everything in it. Update it from "Resource": "*" to the below, using the ARN:
+
+3. Create the policy that will be used to access the bucket. In Permissions. click on 'Add permissions' and then 'Create inline policy'. Go to the JSON tab and click on 'Import managed policies'. In the search box, type in S3, then from the resulting list select 'AmazonS3FullAccess' and press Import. In the JSON box, update the "Resource" key so that we allow access to just the bucket and everything in it. Update it from ```"Resource": "*"``` to the below, using the ARN:
+
+```python
+"Resource": [
+                "arn:aws:s3:::bucket-name",
+                "arn:aws:s3:::bucket-name/*"
+            ]
+```
+
+Then click 'Next: Tags', then 'Next:Review', then give the policy a Name and Description, then click Create Policy. 4. Then go to User Groups, choose the group created in step 2, then in the Permissions tab choose Add Permission and Attach policies. Find the policy just created in step 3, and click Add Permission. 5. Then go to the Users page (from the side menu), click Add Users. Fill in the User name (e.g. c-makret-static-files-user) and click the option for 'Access key - Programmatic access', click Next, add the user to the group created in step 2, click the next buttons until you get to Create user 6. Download the csv file which contains the access key and secret access key for this user. Make sure to download as it won't be available again
+
+#### Upload Media Files to AWS:
+
+1. In AWS, go to S3 and locate the bucket created earlier. Create a new folder called 'media' inside the bucket.
+
+2. Inside this folder, click Upload and select the media files (download them from GitHub) to upload - these are the product images, market images, and home page images.
+
+#### Add settings and environment variables for S3:
+
+1. Back in the workspace, install boto3 and django-storages: ```pip3 install boto3 pip3 install django-storages```, update ```requirements.txt``` and in ```settings.py``` add ```'storages'``` to the ```INSTALLED_APPS```
+
+2. Go to settings.py and add the following (no need to do so if using this project's settings.py file):
+
+```python
+if 'USE_AWS' in os.environ:
+    AWS_STORAGE_BUCKET_NAME = 'bucket-name'
+    AWS_S3_REGION_NAME = 'your bucket region'
+    AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+    AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+    AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
+
+    STATICFILES_STORAGE = 'custom_storages.StaticStorage'
+    STATICFILES_LOCATION = 'static'
+    DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
+    MEDIAFILES_LOCATION = 'media'
+
+    STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
+    MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
+```
+
+This tells Django which bucket to communicate with, where the static files will be coming from in production (the bucket name followed by .s3.amazonaws.com), to use S3 to store the static files when collectstatic is run, and to store uploaded images in S3 (references custom_storages.py which outlines these locations) 3. In Heroku, add ```Config vars``` for ```AWS_ACCESS_KEY_ID``` (value from csv file downloaded earlier), ```AWS_SECRET_ACCESS_KEY``` (value from csv file downloaded earlier), and ```USE_AWS``` (set to True so that the above settings are used in production).
+
+#### To add Stripe for payments:
+
+This project uses Stripe to handle payment processing (currently set up for test payments only). Stripe can be set up as follows:
+
+1. Go to [Stripe](https://stripe.com/gb) and Sign up for an account, or Sign in if you already have one
+
+2. Go to the developers dashboard and from the menu at the side, select API keys. Underneath Standard Keys you will see a Publishable key and a Secret key (note you can toggle between Test and Live keys. This project is currently set up with test keys and would need to be switched over to live keys if it was being launched as a live shop)
+
+3. Add the following to your ```env.py```
+
+```python
+os.environ['STRIPE_PUBLIC_KEY'] = 'replace this with Publishable key from Stripe'  
+os.environ['STRIPE_SECRET_KEY'] = 'replace this with Secret key from Stripe'
+```
+
+4. Add the same variables to the Heroku Config Vars
+
+5. In settings.py add the following code:
+
+```python
+STRIPE_CURRENCY = 'gbp'
+STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', '')
+STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')
+```
+
+#### To add Email Service for Sending Emails:
+
+This project uses Gmail to send emails for account sign ups etc., and order confirmation emails in production. (Emails are printed to the terminal in development.) Gmail for sending emails can be set up as follows:
+
+1. Either create an account or sign into Gmail and go to Settings, then 'Accounts and Import' and then 'Other Google Account Settings'
+
+2. Go to the Security tab and under Signing into Google, select to turn on 2-Step Verification, follow the steps to verify yourself to turn this on
+
+3. Now under this same heading there will be a new option called App passwords, click on this (may need to enter password again) and set up the new app password: under 'select app' choose Mail and under 'select device' choose other and enter a name, e.g. Django, or something simialar, to identify this password. Then click on GENERATE
+
+4. The next screen will show the app password for the device, copy this
+
+5. In Heroku config vars, add two new variables of ```EMAIL_HOST_PASS```, value will be the app password copied above and ```EMAIL_HOST_USER```, with a value equal to the email address that you set the app password on. (These variables are not needed in env.py because this is for production emails only)
+
+6. In settings.py, add the below to get the Gmail account and app password set up to send emails in production, and print emails to the terminal in development (this assumes there is a DEVELOPMENT variable in development environment and no such variable in Heroku):
+
+```python
+if 'DEVELOPMENT' in os.environ:
+    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+    DEFAULT_FROM_EMAIL = 'dummyemailaddress@example.com'
+else:
+    EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+    EMAIL_USE_TLS = True
+    EMAIL_PORT = 587
+    EMAIL_HOST = 'smtp.gmail.com'
+    EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
+    EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASS')
+    DEFAULT_FROM_EMAIL = os.environ.get('EMAIL_HOST_USER')
+```
+
+### Further Deployments during Development and for Final Deployment:
+
+During development for future deployments:
+
+1. Ensure ```DEBUG``` in ```settings.py``` is set to ```False``` (or to ```'DEVELOPMENT' in os.environ```, if you have a DEVELOPMENT environment variable in your env.py and no such variable in the Heroku Config vars)
+
+2. Ensure all changes are pushed to GitHub
+
+3. In Heroku remove the ```DISABLE_COLLECTSTATIC``` config var once you have static files and have set up AWS bucket and user.
+
+4. Follow steps 4 and 5 from the Initial Deployment section above to deploy and view the updated deployed app. Note: if the Heroku dashboard doesn't have the option to connect to GitHub (functionality removed as of 16th April 2022 but may be reinstated), then follow the command line instructions outlined there instead.
+
+## Forking the GitHub Repository
+
+The repository can be forked on GitHub, this creates a copy of the repository that can be viewed or amended without affecting the original repository. This can be done using the following steps:
+
+1. Login to [GitHub](https://github.com/)
+
+2. Locate the relevant repository on GitHub. [This is the cMarket repo](https://github.com/RiyadhKh4n/cmarket)
+
+3. At the top right of the repository (under your avatar) locate the Fork button and click this button
+
+4. You should now have a copy of the repository in your own GitHub account, to which you can make changes
+
+5. To run the project locally, you will need to create an ```env.py``` file with the environment variables and install the requirements from the ```requirements.txt``` file using ```pip3 install -r requirements.txt```
 
 ## Making a Local Clone
  
-1. Log in to GitHub and locate the [GitHub Repository]()
+1. Log in to GitHub and locate the [GitHub Repository](https://github.com/RiyadhKh4n/cmarket)
 2. Under the repository name, click "Clone or download".
 3. To clone the repository using HTTPS, under "Clone with HTTPS", copy the link.
 4. Open Git Bash
 5. Change the current working directory to the location where you want the cloned directory to be made.
 6. Type `git clone`, and then paste the URL you copied in Step 3.
  
-    $ `ADD LINK`
+    $ `https://github.com/RiyadhKh4n/cmarket.git`
  
 7. Press Enter. Your local clone will be created.
  
 ```shell
-$ git clone ADD LINK
+$ git clone https://github.com/RiyadhKh4n/cmarket.git
 > Cloning into `CI-Clone`...
 > remote: Counting objects: 10, done.
 > remote: Compressing objects: 100% (8/8), done.
@@ -620,7 +762,7 @@ $ git clone ADD LINK
  
 Alternatively, if using Gitpod, you can click below to create your own workspace using this repository.
  
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)]()
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/RiyadhKh4n/cmarket)
 
 You will need to also install all required packages in order to run this application on Heroku, refer to [requirements.txt](requirements.txt)
 * Command to install this apps requirements is `pip3 install -r requirements.txt`
