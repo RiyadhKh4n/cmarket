@@ -814,25 +814,25 @@ tr > th,
     }
            
     .col h3 {
-        font-size: 2.4em;
+        font-size: 2em;
         letter-spacing: 1.2px;
     }
 
     .footer-p {
         font-family: 'Lato', sans-serif;
-        font-size: 1.2em;
+        font-size: 1em;
         line-height: 20px;
         letter-spacing: 1px;
     }
 
     .footer-extra {
         font-family: 'Lato', sans-serif;
-        font-size: 16px;
+        font-size: 14px;
     }
 
     .footer-ul > li > a {
         font-family: 'Lato', sans-serif;
-        font-size: 20px;
+        font-size: 18px;
     }
 
     .col:nth-child(2),
@@ -875,19 +875,25 @@ tr > th,
     }
            
     .col h3 {
-        font-size: 2.6em;
+        font-size: 2em;
+        letter-spacing: 1.2px;
     }
 
     .footer-p {
-        font-size: 1.4em;
+        font-family: 'Lato', sans-serif;
+        font-size: 1em;
+        line-height: 20px;
+        letter-spacing: 1px;
     }
 
     .footer-extra {
-        font-size: 18px;
+        font-family: 'Lato', sans-serif;
+        font-size: 14px;
     }
 
     .footer-ul > li > a {
-        font-size: 22px;
+        font-family: 'Lato', sans-serif;
+        font-size: 18px;
     }
 
     .col:nth-child(2),
