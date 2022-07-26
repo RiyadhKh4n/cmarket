@@ -917,6 +917,10 @@ tr > th,
         margin-top: 50px;
     }
 
+    .social-links {
+        margin: 0;
+    }
+
     .extra-info-container > .row > h1 {
         font-size: 40px;
     }
