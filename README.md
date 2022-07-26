@@ -118,7 +118,7 @@ The business owner can use the newsletter to:
 - let subscribers know about any discounts or promotions which are live
 - let subscribers know when an item is back in stock on the website
 
-The business owner doesn't have to invest much time to manage the email marketing, and can try out different types of formats for the newsletter over time to see what works, so it is an easy strategy to get started with in the early days of the business. They need to ensure they are GDPR compliant by making it an opt in process (which it will be via the sign up form) and making it easy to unsubscribe - the link to unsubscribe should be in each email sent. The business will use [Mailchimp](https://mailchimp.com/en-gb/) to manage the collection of email addresses and the sending out of newsletters. This service is free for up to 2,000 subscribers and also provides insights and analytics tools along with many guides and useful information to help users.
+The business owner doesn't have to invest much time to manage the email marketing, and can try out different types of formats for the newsletter over time to see what works, so it is an easy strategy to get started with in the early days of the business. They need to ensure they are GDPR compliant by making it an opt in process (which it will be via the sign up form) and making it easy to unsubscribe - the link to unsubscribe should be in each email sent.
 
 # User Experience (UX)
 
@@ -447,6 +447,9 @@ I used GitHub [Project Boards](https://github.com/RiyadhKh4n/portfolio-project-5
 18. [Facebook](https://www.facebook.com/):
     * Used to created the Facebook Business page
 
+19. [AWS](https://aws.amazon.com/what-is-aws/):
+    * Used to store static files
+
 # Testing
  
 Due to the size of the testing section for Cryptics I have created [TESTING.md](TESTING.md). It contains all my validator testing, lighthouse scores, Django Testing, User Story Testing, Manual Tests, Responsiveness Tests, Browser Compatibility Tests as well as any bugs.
@@ -502,7 +505,7 @@ Repeat steps 8, 9 and 10 throughout development as you create further apps withi
     - import os
     - ```os.environ["SECRET_KEY"] = '```generate a secret key and paste it here'
 
-7. Back in Heroku, go to Settings tab, Config Vars, click Reveal Config Vars. Add a new one called ```SECRET_KEY``` and paste in the value from the ```env.py``` file
+7. Back in Heroku, go to Settings tab, Config Vars, click Reveal Config Vars. Add `SECRET_KEY`, `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`, `DATABASE_URL`, `EMAIL_HOST_PASS`, `EMAIL_HOST_USER`, `STRIPE_PUBLIC_KEY`, `STRIPE_SECRET_KEY`, `USE_AWS` and paste in the value from the ```env.py``` file
 
 8. In the workspace go to the ```settings.py``` file and do the following (no need if using this project's settings.py file):
 
@@ -609,7 +612,11 @@ If you don't have an account, create one, if you do, log in.
 
 3. Go to Properties tab, scroll down to 'Static website hosting', click Edit. Select 'Host a static website', fill in default index.html and error.html (we won't be using these) and press Save
 
-4. Then go to the Permissions tab and scroll down to 'Cross-origin resource sharing (CORS)'. Click Edit and paste in the following: ```[ { "AllowedHeaders": [ "Authorization" ], "AllowedMethods": [ "GET" ], "AllowedOrigins": [ "*" ], "ExposeHeaders": [] } ]```
+4. Then go to the Permissions tab and scroll down to 'Cross-origin resource sharing (CORS)'. Click Edit and paste in the following: 
+
+```python
+[ { "AllowedHeaders": [ "Authorization" ], "AllowedMethods": [ "GET" ], "AllowedOrigins": [ "*" ], "ExposeHeaders": [] } ]
+```
 
 5. Still in Permissions, scroll to the 'Bucket policy' section and select 'Policy generator' (opens in a new tab). In the Policy Type, select 'S3 Bucket Policy'. In Principal, type in * (to all all). In the Action dropdown, select 'Get Object'. And in Amazon Resources Name (ARN), paste in the code from the other tab, it will look like: ```arn:aws:s3::your-bucket-name```. Then click 'Add Statement'. Then click 'Generate Policy'. Copy the code in the 'Policy JSON Document' and paste it into the Bucket policy editor window in the other tab. Before pressing save, add ```/*``` onto the end of the bucket ARN in the Resource key (this is to allow access to all resources in the bucket). Then click Save.
 
@@ -741,7 +748,7 @@ The repository can be forked on GitHub, this creates a copy of the repository th
 
 4. You should now have a copy of the repository in your own GitHub account, to which you can make changes
 
-5. To run the project locally, you will need to create an ```env.py``` file with the environment variables and install the requirements from the ```requirements.txt``` file using ```pip3 install -r requirements.txt```
+5. To run the project locally, you will need to create an ```env.py``` file with the environment variables [`SECRET_KEY`, `DATABASE_URL`, `STRIPE_PUBLIC_KEY` and `STRIPE_SECRET_KEY`] and install the requirements from the ```requirements.txt``` file using ```pip3 install -r requirements.txt```
 
 ## Making a Local Clone
  
@@ -771,6 +778,8 @@ Alternatively, if using Gitpod, you can click below to create your own workspace
 
 You will need to also install all required packages in order to run this application on Heroku, refer to [requirements.txt](requirements.txt)
 * Command to install this apps requirements is `pip3 install -r requirements.txt`
+
+You will also need the following environment variables [`SECRET_KEY`, `DATABASE_URL`, `STRIPE_PUBLIC_KEY` and `STRIPE_SECRET_KEY`] in `env.py` 
  
 # Credits
 
