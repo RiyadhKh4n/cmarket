@@ -36,7 +36,7 @@ main {
 .fa-user:hover, .fa-shopping-bag:hover,
 .secure-checkout:hover, .keep-shopping:hover,
 .adjust-bag:hover, .complete-order:hover, .cancel-btn:hover,
-.pm-btn:hover  {
+.pm-btn:hover, .update-info:hover  {
     color:rgb(106,90,205);
 }
 
@@ -272,7 +272,14 @@ tr > th,
     justify-content: space-between;
     align-items: center;
     width: fit-content;
+}
 
+.clear-filter {
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.5px;
 }
 
 .filtering-option {
