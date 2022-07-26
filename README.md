@@ -108,7 +108,7 @@ A Facebook Business Page will be created which will promote the business, promot
 - Posts asking for user engagement such as a poll to see which products customers would like to see
 - Posts which alert followers of giveaways where they can potentially win items for free
 
-During project development, the Facebook business page was created and the link added to the website foooter. The business details were added, with a Shop button, a link to the website, page description and a welcome post. However, as expected because the business doesn't exist, the page was taken down by Facebook so the link no longer works. [Here is a screenshot of the Facebook business page]() before it was taken down.
+During project development, the Facebook business page was created and the link added to the website foooter. The business details were added, with a Shop button, a link to the website, page description and a welcome post. However, as expected because the business doesn't exist, the page was taken down by Facebook so the link no longer works. [Here is a screenshot of the Facebook business page](documentation/testing/facebook-page.png) before it was taken down.
 
 Email marketing is free (for the numbers this small business will initially have) and relatively easy to set up, so the business will use this too. The website will include a section in the footer to sign up to the newsletter. Building up a list of email subscribers through the newsletter sign up means the business will then have a pool of people who it knows are interested in its products (as they voluntarily signed up!) so are more likely to make a purchase.
 
