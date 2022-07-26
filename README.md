@@ -216,8 +216,8 @@ I also intergrated the MoSoCoW method which is a four-step approach to prioritiz
 
 ### Wireframes
 
-![m.wireframe](images/README.md/mobilewireframe.png)
-![d.wireframe](images/README.md/desktopwireframe.png)
+![m.wireframe](documentation/testing/mobilewireframe.png)
+![d.wireframe](documentation/testing/desktopwireframe.png)
 
 ### Database Schema
 
@@ -260,7 +260,7 @@ The data is organised using the following models:
 
     ### Entity Relationship Diagram
 
-    ![ERD Diagram](images/README.md/erd.png)
+    ![ERD Diagram](documentation/testing/erd.png)
 
     ### Project Structure
 
@@ -332,7 +332,67 @@ Here describes the main features of the website and what the user can expect whe
  
 ## Current Features:
 
+### Navbar:
 
+Navbar where users can easily naviagte through the site
+
+![d.nav](documentation/testing/desktopnav.png)
+
+Navabr is styled to be responsive and collapsible for smaller screens
+
+![m.nav](documentation/testing/mobilenavbar.png)
+
+### Homepage
+
+The home page is designed to maintain simplicity. Less and direct information is provided for the site visitor when they first land on the page. The user is shown a button which they can click to view the shop.
+
+![home](documentation/testing/homepage.png)
+
+### Footer
+
+The Footer is fixed to the bottom of the page. Footer has link for newsletter subscription, social media - Facebook page link, contact button for sending email to the site owner.
+
+![d.footer](documentation/testing/footerdesktop.png)
+
+The footer is fully responsive for all screen sizes and can smoothly adjust style for screen size.
+
+![m.footer](documentation/testing/mobilefooter.png)
+
+### Product Page
+
+Here users can find all the products available on cMarket from T-Shirts and Hoodies to Hats and Mugs. Each Product is in the form of cards that has an image, title, price, category and rating. This page also features a filtering section where users can filter the products depending on Gender or Product Type.
+
+![products](documentation/testing/desktopproducts.png)
+
+### Search & Filter Functionality
+
+Find products by searching and filtering. Users can find what they want by searching about it in the search field. The type of product, name of item, cryptocurrency or category; are ways users can search for products in the site
+
+Once the search result is generated, the number of items found based on their search, and a button to go back to all Products is provided
+
+For each search requested, items found will be listed, here I am searching for products related to ETH:
+
+![searcing](documentation/testing/searching.png)
+
+Users can also use the in-built filtering functionality in order to only see products of a certain type, here I am filtering for Womens Clothes:
+
+![filter](documentation/testing/filter.png)
+
+### Product Details Page
+
+When a user clicks on a product, they will see the product details page where they can view the product description as well as select their size and add the item to basket or their wishlist
+
+![pd](documentation/testing/product-details.png)
+
+### Wishlist
+
+Authenticated users can add any product they like to their wishlist page if they want to.
+
+Wishlist will help users to list all the products that they may like to buy in the future. Users can use this page to differentiate, identify and select their favourite product from cMarket.
+
+Users can also delete an item from their wishlist if they so chose
+
+![wishlist](documentation/testing/wishlist.png)
 
 ## Future Features:
 
