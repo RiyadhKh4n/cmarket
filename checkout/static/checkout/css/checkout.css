@@ -74,6 +74,20 @@ select option[value=""] {
   font-weight: 600;
 }
 
+fieldset {
+  padding: 0.55rem 10rem;
+  border: 0.12rem solid rgb(106,90,205);
+  margin-bottom: 3rem;
+}
+
+fieldset legend {
+  padding-right: 5px;
+  color: white;
+  font-family: 'Lato', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+}
+
 /* Media Queries */
 @media only screen and (min-width: 320px) {
   .adjust-bag, .complete-order {
