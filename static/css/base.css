@@ -58,6 +58,10 @@ li > a > div > p{
     font-weight: 600;
 }
 
+.fa-search {
+    color: #fff;
+}
+
 .fa-search-mobile {
     color: rgb(106,90,205);
 }
