@@ -437,6 +437,12 @@ Users are able to fill out a form if they would like to contact the owner to sug
 
 ![contact](documentation/testing/contact-us.png)
 
+### Newsletter Subscription
+
+Subscription is for subscribing to our site newsletter. Any site visitor can subscribe to the newsletter, they do not have to register to the site for subscribing to our newsletter.
+
+![sub](documentation/testing/newsletter.png)
+
 ## Future Features:
 
 # Technologies
