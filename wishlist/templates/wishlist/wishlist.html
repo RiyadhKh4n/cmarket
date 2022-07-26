@@ -48,12 +48,13 @@
                           {% endif %}
                           <small class="ml-3">
                             <a class="text-danger" href="{% url 'delete_from_wishlist' product.id %}">Delete</a>
-                        </small>
-                          
+                        </small>                         
                       </div>
                   </div>
               </div>
           </div>
+          {% empty %}
+          <p class="p-3">Your Wishlist is Empty</p>
       </div>
   {% endfor %}
     </div>
