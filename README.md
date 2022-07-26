@@ -1,10 +1,10 @@
 # cMarket
 
-cMarket is an E-Commerce site where customers can go to purchase cryptocurrency related merchandise. In additon to being able to purchase clothing and accessories, users are able to add items to their wishlist and subscribe to the cMarket newsletter which contains all of the latest deals and products coming to the site.
+cMarket is an E-Commerce site where customers can purchase cryptocurrency related merchandise. In additon to being able to purchase clothing and accessories, users are able to add items to their wishlist and subscribe to the cMarket newsletter which contains all of the latest deals and products coming to the site.
 
 cMarket is a Full-Stack application built with the Django framework which includes full CRUD functionality allowing users to Sign Up / Log In to their account as well as viewing all products, adding items to their bag and wishlist and having full payment functionality through Stripe.
 
-[Deployed Site]()
+[Deployed Site](https://c--market.herokuapp.com/)
 
 ---
 
