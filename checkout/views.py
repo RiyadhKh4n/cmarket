@@ -16,6 +16,7 @@ from bag.contexts import bag_contents
 import stripe
 import json
 
+
 def checkout(request):
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
@@ -152,6 +153,8 @@ def checkout_success(request, order_number):
     messages.success(request, f'Order successfully processed! \
         Your order number is {order_number}. A confirmation \
         email will be sent to {order.email}.')
+    
+    send_confirmation_email(order)
 
     if 'bag' in request.session:
         del request.session['bag']
@@ -173,11 +176,10 @@ def send_confirmation_email(order):
     body = render_to_string(
         'checkout/confirmation_emails/confirmation_email_body.txt',
         {'order': order, 'contact_email': settings.DEFAULT_FROM_EMAIL})
-        
+
     send_mail(
         subject,
         body,
         settings.DEFAULT_FROM_EMAIL,
         [cust_email]
-        )        
-
+    )
