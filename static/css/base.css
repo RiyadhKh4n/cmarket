@@ -48,13 +48,20 @@ li > a > div > p{
     color: #fff;
 }
 
-.fa-search{
-    color:#fff;
-}
-
 .main-nav-a {
     background-color: white;
 }
+
+.dropdown-item:hover {
+    background:rgb(106,90,205);
+    color: #fff;
+    font-weight: 600;
+}
+
+.fa-search-mobile {
+    color: rgb(106,90,205);
+}
+
 
 /* Homepage */ 
 .jumbotron{
@@ -326,10 +333,32 @@ tr > th,
 
 /* Auth */ 
 
-.auth-container {
-    border: 1px solid red;
-    width: 75vw;
+.auth-h1 {
+    font-family: 'Righteous', cursive;
+    letter-spacing: 1px;
+    width:fit-content;
+    margin: 25px auto;
 }
+
+.auth-p {
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    margin: 5px auto 5px;
+    width:fit-content;
+    text-align: justify;
+}
+
+.signup, .login, .logout, .email-confirm, .reset-form {
+    margin: 5px auto;
+    font-family: 'Lato', sans-serif;
+    width: fit-content;
+    font-size: 14px;
+}
+
+.submit-btn-auth {
+    margin-top: 15px;
+}
+
 
 /* Bag */
 
@@ -455,6 +484,10 @@ tr > th,
         font-size: 13px;
     }
 
+    .search-bar {
+        margin-left: 15px;
+    }
+
     .jumbotron{
         height: 50vh;
     }
@@ -545,7 +578,14 @@ tr > th,
     .extra-info-container > .row > p {
         font-size: 18px;
     }
+
+    .auth-h1 {
+        font-size: 2em;
+    }
      
+    .auth-p {
+        font-size: 0.8em;
+    }
 }
 
 @media only screen and (min-width: 375px) {
@@ -671,35 +711,43 @@ tr > th,
     .col h3 {
         font-family: 'Righteous', cursive;
         font-weight: 700;
-        font-size: 2.2em;
+        font-size: 2em;
         letter-spacing: 1px;
     }
 
     .footer-p {
         font-family: 'Lato', sans-serif;
-        font-size: 1.2em;
+        font-size: 1em;
         line-height: 20px;
         letter-spacing: 1px;
     }
 
     .footer-extra {
         font-family: 'Lato', sans-serif;
-        font-size: 16px;
+        font-size: 14px;
     }
 
     .footer-ul > li > a {
         font-family: 'Lato', sans-serif;
-        font-size: 18px;
+        font-size: 16px;
     }
 
     .social-links {
         font-family: 'Righteous', cursive;
         letter-spacing: 1.2px;
-        font-size: 20px;
+        font-size: 18px;
     }
 
     .keep-shopping, .secure-checkout {
         font-size: 16px
+    }
+
+    .auth-h1 {
+        font-size: 2.2em;
+    }
+     
+    .auth-p {
+        font-size: 1em;
     }
 }
 
@@ -732,31 +780,36 @@ tr > th,
     .col h3 {
         font-family: 'Righteous', cursive;
         font-weight: 700;
-        font-size: 2.2em;
+        font-size: 2em;
         letter-spacing: 1px;
     }
 
     .footer-p {
         font-family: 'Lato', sans-serif;
-        font-size: 1.2em;
+        font-size: 1em;
         line-height: 20px;
         letter-spacing: 1px;
     }
 
     .footer-extra {
         font-family: 'Lato', sans-serif;
-        font-size: 16px;
+        font-size: 14px;
     }
 
     .footer-ul > li > a {
         font-family: 'Lato', sans-serif;
-        font-size: 18px;
+        font-size: 16px;
     }
 
     .social-links {
         font-family: 'Righteous', cursive;
         letter-spacing: 1.2px;
-        font-size: 20px;
+        font-size: 18px;
+        margin-top: 50px;
+    }
+
+    .social-icons .fab {
+        margin-right:0px;
     }
 
     .col:nth-child(2) {
@@ -782,6 +835,18 @@ tr > th,
 
     .extra-info-container > .row > p {
         font-size: 20px;
+    }
+
+    .auth-h1 {
+        font-size: 2.2em;
+    }
+     
+    .auth-p {
+        font-size: 1em;
+    }
+
+    .signup, .login, .logout, .email-confirm, .reset-form {
+        font-size: 16px;
     }
 }
 
@@ -853,6 +918,17 @@ tr > th,
         font-size: 24px;
     }
 
+    .auth-h1 {
+        font-size: 2.8em;
+    }
+     
+    .auth-p {
+        font-size: 1.2em;
+    }
+
+    .signup, .login, .logout, .email-confirm, .reset-form {
+        font-size: 18px;
+    }
 }
 
 @media only screen and (min-width: 1440px) {
