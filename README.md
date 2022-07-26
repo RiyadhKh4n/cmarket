@@ -394,6 +394,49 @@ Users can also delete an item from their wishlist if they so chose
 
 ![wishlist](documentation/testing/wishlist.png)
 
+### Profile
+
+Every registered user will have a profile page. In order to access your profile page, you must be registered and signed in. This page can be used to manage their delivery information and view all past orders.
+
+![empty-profile](documentation/testing/profile-empty.png)
+![not-empty-profile](documentation/testing/profile-not-empty.png)
+
+### Bag
+
+Once users have selected the items they would like to buy, they can view their bag and checkout. Here users can update the quantity of each item, as well as remove an item from their bag. They can also see the grand total and navigate back to the shop or continue onto checkout.
+
+![bag](documentation/testing/bag-desktop.png)
+
+### Checkout
+
+When checking out, users must enter personal details like Name and Email. As well as this, they must enter the delivery address which can either be auto-filled via the profile page or manually entered for non-authenticated users. The payment field is generated using [Stripe](https://stripe.com/en-se), it is a safe and secure payment system. Stripe does validation and authenticates the card owner for completing the payment process. Users are notified how much their card will be charged when they click payment button. 
+
+Users can see a preview of their order on the right hand side of the screen as well as the grand total.
+
+Currently you can make payments with their test card number:
+
+`4242 4242 4242 4242 | 04/24 | 242 | 42424`
+
+![checkout](documentation/testing/checkout-desktop.png)
+
+While the transaction is in progress, a loader is displayed letting the user know the transaction is being made:
+
+![overlay](documentation/testing/overlay.png)
+
+If they payment goes through without problems, the user will see the chekcout confirmation page letting them know their order details
+
+![checkout-success](documentation/testing/checkout-success.png)
+
+### Privacy and Terms & Conditions Page
+
+![privacy](documentation/testing/extra-pages.png)
+
+### Contact Us Page
+
+Users are able to fill out a form if they would like to contact the owner to suggest site improvements, product suggestions or general feedback.
+
+![contact](documentation/testing/contact-us.png)
+
 ## Future Features:
 
 # Technologies
@@ -842,6 +885,15 @@ You will need to also install all required packages in order to run this applica
 You will also need the following environment variables [`SECRET_KEY`, `DATABASE_URL`, `STRIPE_PUBLIC_KEY` and `STRIPE_SECRET_KEY`] in `env.py` 
  
 # Credits
+
+During the process of project development, there have been various sources that gave me idea how to do a particular feature or fix a bug. The following are the sources that I got knowledge from:
+
+- [Stack Overflow](https://stackoverflow.com/)
+- [Django Allauth](https://django-allauth.readthedocs.io/en/latest/installation.html)
+- [Django Docs](https://docs.djangoproject.com/en/4.0/)
+- [Code Institute](https://codeinstitute.net/) course materials and the Boutique Ado Walkthrough Project.
+- [Bootstrap](https://getbootstrap.com/)
+- [Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/)
 
 ## Code
 
