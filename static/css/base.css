@@ -282,6 +282,11 @@ tr > th,
     letter-spacing: 0.5px;
 }
 
+.clear-filter:hover {
+    color:#fff;
+    width: fit-content;
+}
+
 .filtering-option {
     height: 100%;
 } 
@@ -397,6 +402,10 @@ tr > th,
 .contact-title {
     font-family: 'Lato', sans-serif;
     font-weight: 600;
+}
+
+.contact-title, .drop-us-msg {
+    margin-left: 12px;
 }
 
 /* Footer */
