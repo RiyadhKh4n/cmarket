@@ -224,6 +224,12 @@ tr > th,
     overflow-y: auto;
 }
 
+.toast-btn {
+    background-color: rgb(106,90,205);
+    color: #fff;
+
+}
+
 /* Product Form */
 
 .btn-file {
