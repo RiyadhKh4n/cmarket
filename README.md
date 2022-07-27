@@ -262,6 +262,8 @@ The data is organised using the following models:
 
     ![ERD Diagram](documentation/testing/erd.png)
 
+    * Lightblue = Custom Models
+
     ### Project Structure
 
     cMarket will be developed using Django, as a result I will split the program functionality into separate apps. A Django application is a Python package that is specifically inteded for use in a Django project. For my project I will create six apps; Home, Products, Bag, Profiles, Checkout and Wishlist.
@@ -350,7 +352,7 @@ The home page is designed to maintain simplicity. Less and direct information is
 
 ### Footer
 
-The Footer is fixed to the bottom of the page. Footer has link for newsletter subscription, social media - Facebook page link, contact button for sending email to the site owner.
+The Footer is fixed to the bottom of the page. The footer contains all the necessary links customers may need like the privacy policy, terms and conditions, contact form and the cMarket newsletter.
 
 ![d.footer](documentation/testing/footerdesktop.png)
 
@@ -423,9 +425,9 @@ While the transaction is in progress, a loader is displayed letting the user kno
 
 ![overlay](documentation/testing/overlay.png)
 
-If they payment goes through without problems, the user will see the chekcout confirmation page letting them know their order details
+If they payment goes through without problems, the user will see the checkout confirmation page letting them know their order details
 
-![checkout-success](documentation/testing/checkout-success.png)
+![checkout-success](documentation/testing/checkout-success-new.png)
 
 ### Privacy and Terms & Conditions Page
 
@@ -441,7 +443,15 @@ Users are able to fill out a form if they would like to contact the owner to sug
 
 Subscription is for subscribing to our site newsletter. Any site visitor can subscribe to the newsletter, they do not have to register to the site for subscribing to our newsletter.
 
-![sub](documentation/testing/newsletter.png)
+![newsletter](documentation/testing/newsletter.png)
+
+### Admin Only Features
+
+As the site admin, I am able to add, edit and delete products through the front-end via the 'Product Management' section
+
+![menu](documentation/testing/menu.png)
+![add-product](documentation/testing/add-product.png)
+![edit-product](documentation/testing/edit-product.png)
 
 ## Future Features:
 
