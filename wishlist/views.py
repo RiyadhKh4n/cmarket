@@ -12,6 +12,7 @@ from django.contrib.auth.decorators import login_required
 from products.models import Product 
 from .models import FavouritesList
 
+
 @login_required
 def wishlist(request):
     """
@@ -58,7 +59,7 @@ def add_to_wishlist(request, product_id):
     else:
         favouritesList.product.add(product)
         messages.info(
-            request, f'Added {product.name[:30]} to your Favourites.'
+            request, f'Added {product.name[:30]} to your Wishlist.'
         )
     return redirect(reverse('product_detail', args=[product_id]))
 
