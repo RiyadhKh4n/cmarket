@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: /accounts/
+Disallow: /bag/
+Disallow: /checkout/
+Disallow: /profile/
+Disallow: /wishlist/
+Disallow: /products/add
+Disallow: /products/edit
+Sitemap: https://c--market.herokuapp.com/sitemap.xml
