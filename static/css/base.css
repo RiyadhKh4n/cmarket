@@ -156,16 +156,19 @@ li > a > div > p{
     color: white;
 }
 
-.wishlist-div {
-    margin-top: 20px;
-    padding-left: 0;
-}
-
 .fa-heart {
     width: fit-content;
     padding: 10px;
     border-radius: 50%;
     border: 2px solid #fff;
+}
+
+.wishlist-btn {
+    margin-top: 10px;
+}
+
+.wishlist-btn:hover {
+    border: 1px solid rgb(106,90,205);
 }
 
 /* Bag */

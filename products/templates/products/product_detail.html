@@ -90,15 +90,13 @@
 
                     <div class="row">
                         <div class="col-12 col-lg-6 wishlist-div">
-                          <!-- If user is logged in and has item in favouriteslist, this is visible on the button -->
                           {% if request.user.is_authenticated %}
-                            <a href="{% url 'add_to_wishlist' product.id %}" aria-label="Add product to Wishlist" class="btn inline white">
-                            <i class="far fa-heart"></i>
-                            Add to Wishlist
+                            <a href="{% url 'add_to_wishlist' product.id %}" aria-label="Add product to Wishlist" class="btn white wishlist-btn">
+                                <i class="far fa-heart"></i>
                             </a>
                           {% else %}
                           <!-- Prompt the user to sign in if not signed in -->
-                          <a href="{% url 'account_login' %}" aria-label="Sign In" class="btn inline white">
+                          <a href="{% url 'account_login' %}" aria-label="Sign In" class="btn white">
                             Log In to Add to Wishlist
                           </a>
                           {% endif %}
