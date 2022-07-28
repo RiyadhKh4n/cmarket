@@ -226,7 +226,7 @@ Privacy & T&C's         | ![ptc](documentation/testing/privacy-768.png)
 </details>
 
 <details>
-<summary>Desktop (1024px) & Desktop (1440px)</summary>
+<summary>Desktop (1024px & 1440px)</summary>
 
 Page                    | Image
 --------------------    | ---------------
@@ -248,6 +248,67 @@ Privacy & T&C's         | ![ptc](documentation/testing/pricacy-1024.png)
 ## Browser Compatibility Tests 
 
 I will test cMarket on [Firefox](https://www.mozilla.org/en-GB/firefox/new/), [Microsoft Edge](https://www.microsoft.com/en-us/edge) and [Brave Browser](https://brave.com/):
+
+<details>
+<summary>Brave Browser</summary>
+
+Page                    | Image
+--------------------    | ---------------
+Home                    | ![home](documentation/testing/home-768.png)
+Accounts                | ![acc](documentation/testing/account-768.png)
+Products                | ![prod](documentation/testing/product-768.png)
+Product Details         | ![prod-d](documentation/testing/product-details-768.png)
+Bag                     | ![bag](documentation/testing/bag-768.png)
+Checkout                | ![check](documentation/testing/checkout-768.png)
+Wishlist                | ![wishlist](documentation/testing/wishlist-768.png)
+Profile                 | ![profile](documentation/testing/profile-768.png)
+Product Management      | ![product-man](documentation/testing/product-man-768.png)
+Contact                 | ![contact](documentation/testing/contact-768.png)
+Newsletter              | ![news](documentation/testing/newsletter-768.png)
+Privacy & T&C's         | ![ptc](documentation/testing/privacy-768.png)
+
+</details>
+
+<details>
+<summary>Microsoft Edge</summary>
+
+Page                    | Image
+--------------------    | ---------------
+Home                    | ![home](documentation/testing/mic-home.png)
+Accounts                | ![acc](documentation/testing/mic-account.png)
+Products                | ![prod](documentation/testing/mic-prod.png)
+Product Details         | ![prodd](documentation/testing/mic-prod-des.png)
+Bag                     | ![bag](documentation/testing/mic-bag.png)
+Checkout                | ![check](documentation/testing/mic-chekcout.png)
+Wishlist                | ![wish](documentation/testing/mic-wishlist.png)
+Profile                 | ![prof](documentation/testing/mic-prof.png)
+Product Management      | ![prodman](documentation/testing/mic-prod-man.png)
+Contact                 | ![cont](documentation/testing/mic-contact.png)
+Newsletter              | ![news](documentation/testing/mic-newsletter.png)
+Privacy & T&C's         | ![ptc](documentation/testing/mic-pricacy.png)
+
+</details>
+
+<details>
+<summary>Firefox</summary>
+
+Page                    | Image
+--------------------    | ---------------
+Home                    | ![home](documentation/testing/)
+Accounts                | ![acc](documentation/testing/)
+Products                | ![prod](documentation/testing/)
+Product Details         | ![prodd](documentation/testing/)
+Bag                     | ![bag](documentation/testing/)
+Checkout                | ![check](documentation/testing/)
+Wishlist                | ![wish](documentation/testing/)
+Profile                 | ![prof](documentation/testing/)
+Product Management      | ![prodman](documentation/testing/)
+Contact                 | ![cont](documentation/testing/)
+Newsletter              | ![news](documentation/testing/)
+Privacy & T&C's         | ![ptc](documentation/testing/)
+
+</details>
+
 
 ### Firefox:
 
