@@ -117,8 +117,26 @@ manage.py               | ![manage.py](documentation/testing/manage.png)
 
 </details>
 
+<details>
+<summary>Root Level Files</summary>
+
+Python Files            | PEP8 result
+--------------------    | ---------------
+custom_storages.py      | ![cs](documentation/testing/custom-storage.png)
+manage.py               | ![manage.py](documentation/testing/manage.png)
+
+</details>
 
 ## Lighthouse Score
+
+<details>
+<summary>Lighthouse Results</summary>
+
+Device                  | Lighthouse Score
+--------------------    | ---------------
+Desktop                 | ![desktop](documentation/testing/lighthouse-desktop.png)
+Mobile                  | ![mobile](documentation/testing/lighthouse-mobile.png)
+
 
 ### Desktop:
 
