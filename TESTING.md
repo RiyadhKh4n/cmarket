@@ -170,18 +170,18 @@ Privacy & T&C's         | ![ptc](documentation/testing/privacy-320.png)
 
 Page                    | Image
 --------------------    | ---------------
-Home                    |
-Accounts                | 
-Products                | 
-Product Details         | 
-Bag                     | 
-Checkout                | 
-Wishlist                | 
-Profile                 | 
-Product Management      |
-Contact                 |
-Newsletter              |
-Privacy & T&C's         |
+Home                    | ![home](documentation/testing/homepage-320.png)
+Accounts                | ![acc](documentation/testing/accounts-320.png)
+Products                | ![product](documentation/testing/products-320.png)
+Product Details         | ![product-details](documentation/testing/productdetails-320.png)
+Bag                     | ![bag](documentation/testing/bag-320.png)
+Checkout                | ![checkout](documentation/testing/checkout-320.png)
+Wishlist                | ![wishlist](documentation/testing/wishlist-320.png)
+Profile                 | ![profile](documentation/testing/profile-320.png)
+Product Management      | ![pm](documentation/testing/product-man-320.png)
+Contact                 | ![contact](documentation/testing/contact-320.png)
+Newsletter              | ![newsletter](documentation/testing/newsletter-320.png)
+Privacy & T&C's         | ![ptc](documentation/testing/privacy-320.png)
 
 </details>
 
@@ -190,23 +190,23 @@ Privacy & T&C's         |
 
 Page                    | Image
 --------------------    | ---------------
-Home                    |
-Accounts                | 
-Products                | 
-Product Details         | 
-Bag                     | 
-Checkout                | 
-Wishlist                | 
-Profile                 | 
-Product Management      | 
-Contact                 |
-Newsletter              |
-Privacy & T&C's         |
+Home                    | ![home](documentation/testing/homepage-425.png)
+Accounts                | ![acc](documentation/testing/accounts-425.png)
+Products                | ![prod](documentation/testing/products-425.png)
+Product Details         | ![prod-det](documentation/testing/product-details-425.png)
+Bag                     | ![bag](documentation/testing/bag-425.png)
+Checkout                | ![check](documentation/testing/checkout-425.png)
+Wishlist                | ![wish](documentation/testing/wishlist-425.png)
+Profile                 | ![profile](documentation/testing/profile-425.png)
+Product Management      | ![prod-man](documentation/testing/product-man-425.png)
+Contact                 | ![cont](documentation/testing/contact-425.png)
+Newsletter              | ![newsletter](documentation/testing/newsletter-425.png)
+Privacy & T&C's         | ![ptc](documentation/testing/privacy-320.png)
 
 </details>
 
 <details>
-<summary>Medium (786px)</summary>
+<summary>Tablet (786px)</summary>
 
 Page                    | Image
 --------------------    | ---------------
