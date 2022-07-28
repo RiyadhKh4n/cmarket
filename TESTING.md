@@ -247,7 +247,7 @@ Privacy & T&C's         | ![ptc](documentation/testing/pricacy-1024.png)
 
 ## Browser Compatibility Tests 
 
-I will test cMarket on [Firefox](https://www.mozilla.org/en-GB/firefox/new/), [Microsoft Edge](https://www.microsoft.com/en-us/edge) and [Brave Browser](https://brave.com/):
+I will test cMarket on [Brave Browser](https://brave.com/), [Microsoft Edge](https://www.microsoft.com/en-us/edge) and [Firefox](https://www.mozilla.org/en-GB/firefox/new/):  
 
 <details>
 <summary>Brave Browser</summary>
@@ -294,18 +294,18 @@ Privacy & T&C's         | ![ptc](documentation/testing/mic-pricacy.png)
 
 Page                    | Image
 --------------------    | ---------------
-Home                    | ![home](documentation/testing/)
-Accounts                | ![acc](documentation/testing/)
-Products                | ![prod](documentation/testing/)
-Product Details         | ![prodd](documentation/testing/)
-Bag                     | ![bag](documentation/testing/)
-Checkout                | ![check](documentation/testing/)
-Wishlist                | ![wish](documentation/testing/)
-Profile                 | ![prof](documentation/testing/)
-Product Management      | ![prodman](documentation/testing/)
-Contact                 | ![cont](documentation/testing/)
-Newsletter              | ![news](documentation/testing/)
-Privacy & T&C's         | ![ptc](documentation/testing/)
+Home                    | ![home](documentation/testing/fire-home.png)
+Accounts                | ![acc](documentation/testing/fire-account.png)
+Products                | ![prod](documentation/testing/fire-products.png)
+Product Details         | ![prodd](documentation/testing/fire-prod-det.png)
+Bag                     | ![bag](documentation/testing/fire-bag.png)
+Checkout                | ![check](documentation/testing/fire-checkout.png)
+Wishlist                | ![wish](documentation/testing/fire-wishlist.png)
+Profile                 | ![prof](documentation/testing/fire-profile.png)
+Product Management      | ![prodman](documentation/testing/fire-prod-man.png)
+Contact                 | ![cont](documentation/testing/fire-contact.png)
+Newsletter              | ![news](documentation/testing/fire-newsletter.png)
+Privacy & T&C's         | ![ptc](documentation/testing/fire-privacy.png)
 
 </details>
 
