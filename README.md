@@ -468,7 +468,7 @@ As the site admin, I am able to add, edit and delete products through the front-
  
 I used GitHub [Project Boards](https://github.com/RiyadhKh4n/portfolio-project-5/projects/1) to keep track of all the User Stories and Tasks necessary in order to build Cryptics
 
-- The [User Story Project Board](https://github.com/RiyadhKh4n/cryptics/projects/1) was used to keep track of my User Stories and ensure I implemented all the functionality I set out to implement. I used the MoSCoW method to prioritize which project requirements will provide the best user experience.
+- The [User Story Project Board](https://github.com/RiyadhKh4n/cmarket/projects/1) was used to keep track of my User Stories and ensure I implemented all the functionality I set out to implement. I used the MoSCoW method to prioritize which project requirements will provide the best user experience.
 
 ## Frameworks
 
