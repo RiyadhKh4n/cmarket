@@ -211,60 +211,39 @@ Privacy & T&C's         | ![ptc](documentation/testing/privacy-320.png)
 Page                    | Image
 --------------------    | ---------------
 Home                    | ![home](documentation/testing/home-768.png)
-Accounts                | ![home](documentation/testing/account-768.png)
-Products                | ![home](documentation/testing/product-768.png)
-Product Details         | ![home](documentation/testing/product-details-768.png)
-Bag                     | ![home](documentation/testing/bag-768.png)
-Checkout                | ![home](documentation/testing/checkout-768.png)
-Wishlist                | ![home](documentation/testing/wishlist-768.png)
-Profile                 | ![home](documentation/testing/profile-768.png)
-Product Management      | ![home](documentation/testing/product-man-768.png)
-Contact                 | ![home](documentation/testing/contact-768.png)
-Newsletter              | ![home](documentation/testing/newsletter-768.png)
-Privacy & T&C's         | ![home](documentation/testing/privacy-768.png)
+Accounts                | ![acc](documentation/testing/account-768.png)
+Products                | ![prod](documentation/testing/product-768.png)
+Product Details         | ![prod-d](documentation/testing/product-details-768.png)
+Bag                     | ![bag](documentation/testing/bag-768.png)
+Checkout                | ![check](documentation/testing/checkout-768.png)
+Wishlist                | ![wishlist](documentation/testing/wishlist-768.png)
+Profile                 | ![profile](documentation/testing/profile-768.png)
+Product Management      | ![product-man](documentation/testing/product-man-768.png)
+Contact                 | ![contact](documentation/testing/contact-768.png)
+Newsletter              | ![news](documentation/testing/newsletter-768.png)
+Privacy & T&C's         | ![ptc](documentation/testing/privacy-768.png)
 
 </details>
 
 <details>
-<summary>Desktop (1024px)</summary>
+<summary>Desktop (1024px) & Desktop (1440px)</summary>
 
 Page                    | Image
 --------------------    | ---------------
-Home                    | ![home](documentation/testing/)
-Accounts                | ![home](documentation/testing/)
-Products                | ![home](documentation/testing/)
-Product Details         | ![home](documentation/testing/)
-Bag                     | ![home](documentation/testing/)
-Checkout                | ![home](documentation/testing/)
-Wishlist                | ![home](documentation/testing/)
-Profile                 | ![home](documentation/testing/)
-Product Management      | ![home](documentation/testing/)
-Contact                 | ![home](documentation/testing/)
-Newsletter              | ![home](documentation/testing/)
-Privacy & T&C's         | ![home](documentation/testing/)
+Home                    | ![home](documentation/testing/homepage-1024.png)
+Accounts                | ![acc](documentation/testing/accounts-1024.png)
+Products                | ![prod](documentation/testing/products-1024.png)
+Product Details         | ![prodd](documentation/testing/product-details-1024.png)
+Bag                     | ![bag](documentation/testing/bag-page-1024.png)
+Checkout                | ![check](documentation/testing/checkout-1024.png)
+Wishlist                | ![wish](documentation/testing/wishlist-1024.png)
+Profile                 | ![prof](documentation/testing/profile-1024.png)
+Product Management      | ![prodman](documentation/testing/prod-man-1024.png)
+Contact                 | ![cont](documentation/testing/contact-1024.png)
+Newsletter              | ![news](documentation/testing/newsletter-1204.png)
+Privacy & T&C's         | ![ptc](documentation/testing/pricacy-1024.png)
 
 </details>
-
-<details>
-<summary>Desktop (1440px)</summary>
-
-Page                    | Image
---------------------    | ---------------
-Home                    |
-Accounts                | 
-Products                | 
-Product Details         | 
-Bag                     | 
-Checkout                | 
-Wishlist                | 
-Profile                 | 
-Product Management      | 
-Contact                 |
-Newsletter              |
-Privacy & T&C's         |
-
-</details>
-
 
 ## Browser Compatibility Tests 
 
