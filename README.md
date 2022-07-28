@@ -8,13 +8,13 @@ cMarket is a Full-Stack application built with the Django framework which includ
 
 ---
 
-![AmIResponsive]()
+![AmIResponsive](documentation/testing/amiresponsive.png)
 
 ---
  
 ## Purpose 
 
-The primary purpose of the website is for the website owner to sell cryptocurrency related merchandise online.
+The primary purpose of the website is for the owner to sell cryptocurrency related merchandise online.
 
 ## Aims 
 
@@ -466,7 +466,7 @@ As the site admin, I am able to add, edit and delete products through the front-
 
 - [JavaScript](https://www.javascript.com/) - JavaScript is a high-level language that has dynamic typing, prototype-based object-orientation, and first-class functions. It is multi-paradigm, supporting event-driven, functional, and imperative programming styles.
  
-I used GitHub [Project Boards](https://github.com/RiyadhKh4n/portfolio-project-5/projects/1) to keep track of all the User Stories and Tasks necessary in order to build Cryptics
+I used GitHub [Project Boards](https://github.com/RiyadhKh4n/portfolio-project-5/projects/1) to keep track of all the User Stories and Tasks necessary in order to build cMarket
 
 - The [User Story Project Board](https://github.com/RiyadhKh4n/cmarket/projects/1) was used to keep track of my User Stories and ensure I implemented all the functionality I set out to implement. I used the MoSCoW method to prioritize which project requirements will provide the best user experience.
 
@@ -535,43 +535,40 @@ I used GitHub [Project Boards](https://github.com/RiyadhKh4n/portfolio-project-5
  
 8. [PEP8](http://pep8online.com/):
     * Used to validate my Python code
- 
-9. [favicon.cc](https://www.favicon.cc/):
-    * Used to create the favicon
 
-10. [HerokuSQL](https://www.heroku.com/postgres):
+9. [HerokuSQL](https://www.heroku.com/postgres):
     * Database used for deployed project
 
-11. [Balsamiq](https://balsamiq.com/wireframes/):
+10. [Balsamiq](https://balsamiq.com/wireframes/):
     * Used to create Wireframes
 
-12. [SmartDraw](https://www.smartdraw.com/): 
+11. [SmartDraw](https://www.smartdraw.com/): 
     * Used to create ERD diagrams
 
-13. [W3C Markup Validation Service](https://validator.w3.org/):
+12. [W3C Markup Validation Service](https://validator.w3.org/):
     * Used to validate HTML code
 
-14. [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/):
+13. [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/):
     * Used to validate CSS
 
-15. [JSHint](https://jshint.com/):
+14. [JSHint](https://jshint.com/):
     * Used to validate any JavaScript code used
 
-16. [Stripe](https://stripe.com/gb):
+15. [Stripe](https://stripe.com/gb):
     * Used to handle payments (currently only set up to handle test payments)
 
-17. [Gmail](https://mail.google.com/):
+16. [Gmail](https://mail.google.com/):
     * Used to send emails
 
-18. [Facebook](https://www.facebook.com/):
+17. [Facebook](https://www.facebook.com/):
     * Used to created the Facebook Business page
 
-19. [AWS](https://aws.amazon.com/what-is-aws/):
+18. [AWS](https://aws.amazon.com/what-is-aws/):
     * Used to store static files
 
 # Testing
  
-Due to the size of the testing section for Cryptics I have created [TESTING.md](TESTING.md). It contains all my validator testing, lighthouse scores, Django Testing, User Story Testing, Manual Tests, Responsiveness Tests, Browser Compatibility Tests as well as any bugs.
+All testing of cMarket can be found in [TESTING.md](TESTING.md). It contains all my validator testing, lighthouse scores, User Story Testing, Manual Tests, Responsiveness Tests, Browser Compatibility Tests as well as any bugs found.
  
 [Link To TESTING.md](TESTING.md)
    
@@ -902,6 +899,15 @@ You will also need the following environment variables [`SECRET_KEY`, `DATABASE_
  
 # Credits
 
+Website's where I got the product from:
+- [Coin Bureau](https://store.coinbureau.com/shop/)
+- [TheCryptoMerch](https://thecryptomerch.com/)
+
+Inspiration for the website deisgn:
+- [Coin Bureau](https://store.coinbureau.com/shop/)
+
+## Code
+
 During the process of project development, there have been various sources that gave me idea how to do a particular feature or fix a bug. The following are the sources that I got knowledge from:
 
 - [Stack Overflow](https://stackoverflow.com/)
@@ -911,10 +917,7 @@ During the process of project development, there have been various sources that 
 - [Bootstrap](https://getbootstrap.com/)
 - [Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/)
 
-## Code
-
 ### Acknowledgements
 * [Tim Nelson](https://www.linkedin.com/in/travel-tim-nelson/) - My Mentor
 * Tutor Support
-* Slack community
  
