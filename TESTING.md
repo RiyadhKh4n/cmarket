@@ -206,22 +206,22 @@ Privacy & T&C's         | ![ptc](documentation/testing/privacy-320.png)
 </details>
 
 <details>
-<summary>Tablet (786px)</summary>
+<summary>Tablet (768px)</summary>
 
 Page                    | Image
 --------------------    | ---------------
-Home                    |
-Accounts                | 
-Products                | 
-Product Details         | 
-Bag                     | 
-Checkout                | 
-Wishlist                | 
-Profile                 | 
-Product Management      |
-Contact                 |
-Newsletter              |
-Privacy & T&C's         |
+Home                    | ![home](documentation/testing/home-768.png)
+Accounts                | ![home](documentation/testing/account-768.png)
+Products                | ![home](documentation/testing/product-768.png)
+Product Details         | ![home](documentation/testing/product-details-768.png)
+Bag                     | ![home](documentation/testing/bag-768.png)
+Checkout                | ![home](documentation/testing/checkout-768.png)
+Wishlist                | ![home](documentation/testing/wishlist-768.png)
+Profile                 | ![home](documentation/testing/profile-768.png)
+Product Management      | ![home](documentation/testing/product-man-768.png)
+Contact                 | ![home](documentation/testing/contact-768.png)
+Newsletter              | ![home](documentation/testing/newsletter-768.png)
+Privacy & T&C's         | ![home](documentation/testing/privacy-768.png)
 
 </details>
 
@@ -230,18 +230,18 @@ Privacy & T&C's         |
 
 Page                    | Image
 --------------------    | ---------------
-Home                    |
-Accounts                | 
-Products                | 
-Product Details         | 
-Bag                     | 
-Checkout                | 
-Wishlist                | 
-Profile                 | 
-Product Management      |
-Contact                 |
-Newsletter              |
-Privacy & T&C's         |
+Home                    | ![home](documentation/testing/)
+Accounts                | ![home](documentation/testing/)
+Products                | ![home](documentation/testing/)
+Product Details         | ![home](documentation/testing/)
+Bag                     | ![home](documentation/testing/)
+Checkout                | ![home](documentation/testing/)
+Wishlist                | ![home](documentation/testing/)
+Profile                 | ![home](documentation/testing/)
+Product Management      | ![home](documentation/testing/)
+Contact                 | ![home](documentation/testing/)
+Newsletter              | ![home](documentation/testing/)
+Privacy & T&C's         | ![home](documentation/testing/)
 
 </details>
 
