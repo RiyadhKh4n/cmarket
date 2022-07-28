@@ -2,14 +2,14 @@ from django.shortcuts import (
     render,
     get_object_or_404,
     redirect,
-    reverse,
+    reverse
     )
-    
+
 from django.http import Http404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 
-from products.models import Product 
+from products.models import Product
 from .models import FavouritesList
 
 
@@ -29,7 +29,8 @@ def wishlist(request):
         fave = favourites.product.all()
 
     if not fave:
-        messages.info(request, 'You have not added any items to your wishlist :(')
+        messages.info(request, 'You have not added any '
+                      ' items to your wishlist :(')
 
     template = 'wishlist/wishlist.html'
     context = {
@@ -67,7 +68,7 @@ def add_to_wishlist(request, product_id):
 @login_required
 def delete_from_wishlist(request, product_id):
     """ Delete a product from the store """
-   
+
     product = get_object_or_404(Product, pk=product_id)
     product.delete()
     messages.success(request, 'Product removed from Wishlist!')
