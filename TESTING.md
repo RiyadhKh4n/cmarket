@@ -310,24 +310,10 @@ Privacy & T&C's         | ![ptc](documentation/testing/fire-privacy.png)
 </details>
 
 
-### Firefox:
-
-![firefox]()
-
-### Microsoft Edge:
-
-![edge]()
-
-### Brave Browser:
-
-![Brave]()
-
 ## GitHub Issues
 
 When developing the project, I used GitHub Issues as a way to track my work on GitHub, and make notes of any bugs or features that I needed to fix/implement.
 
-- [Here]() you can find a list of open issues, which are made up of various User Stories or Dvelopment tasks that needed completing.
-
-- [Here]() you can find a list of all closed issues, which show any bugs I resolved.
+- [Here](https://github.com/RiyadhKh4n/cmarket/issues?q=is%3Aissue+is%3Aclosed) you can find a list of all issues used for the development of cMarket 
 
 ## Bugs
