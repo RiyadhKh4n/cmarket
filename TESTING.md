@@ -130,21 +130,14 @@ manage.py               | ![manage.py](documentation/testing/manage.png)
 ## Lighthouse Score
 
 <details>
-<summary>Lighthouse Results</summary>
+<summary>Results</summary>
 
 Device                  | Lighthouse Score
 --------------------    | ---------------
 Desktop                 | ![desktop](documentation/testing/lighthouse-desktop.png)
 Mobile                  | ![mobile](documentation/testing/lighthouse-mobile.png)
 
-
-### Desktop:
-
-![desktop](documentation/testing/lighthouse-desktop.png)
-
-### Mobile:
-
-![mobile](documentation/testing/lighthouse-mobile.png)
+</details>
 
 ## User Story Tests
 
@@ -152,6 +145,125 @@ Mobile                  | ![mobile](documentation/testing/lighthouse-mobile.png)
 
 ## Responsiveness Testing
 
+<details>
+<summary>Mobile (320px)</summary>
+
+Page                    | Image
+--------------------    | ---------------
+Home                    | ![home](documentation/testing/homepage-320.png)
+Accounts                | ![acc](documentation/testing/accounts-320.png)
+Products                | ![product](documentation/testing/products-320.png)
+Product Details         | ![product-details](documentation/testing/productdetails-320.png)
+Bag                     | ![bag](documentation/testing/bag-320.png)
+Checkout                | ![checkout](documentation/testing/checkout-320.png)
+Wishlist                | ![wishlist](documentation/testing/wishlist-320.png)
+Profile                 | ![profile](documentation/testing/profile-320.png)
+Product Management      | ![pm](documentation/testing/product-man-320.png)
+Contact                 | ![contact](documentation/testing/contact-320.png)
+Newsletter              | ![newsletter](documentation/testing/newsletter-320.png)
+Privacy & T&C's         | ![ptc](documentation/testing/privacy-320.png)
+
+</details>
+
+<details>
+<summary>Mobile (375px)</summary>
+
+Page                    | Image
+--------------------    | ---------------
+Home                    |
+Accounts                | 
+Products                | 
+Product Details         | 
+Bag                     | 
+Checkout                | 
+Wishlist                | 
+Profile                 | 
+Product Management      |
+Contact                 |
+Newsletter              |
+Privacy & T&C's         |
+
+</details>
+
+<details>
+<summary>Mobile (425px)</summary>
+
+Page                    | Image
+--------------------    | ---------------
+Home                    |
+Accounts                | 
+Products                | 
+Product Details         | 
+Bag                     | 
+Checkout                | 
+Wishlist                | 
+Profile                 | 
+Product Management      | 
+Contact                 |
+Newsletter              |
+Privacy & T&C's         |
+
+</details>
+
+<details>
+<summary>Medium (786px)</summary>
+
+Page                    | Image
+--------------------    | ---------------
+Home                    |
+Accounts                | 
+Products                | 
+Product Details         | 
+Bag                     | 
+Checkout                | 
+Wishlist                | 
+Profile                 | 
+Product Management      |
+Contact                 |
+Newsletter              |
+Privacy & T&C's         |
+
+</details>
+
+<details>
+<summary>Desktop (1024px)</summary>
+
+Page                    | Image
+--------------------    | ---------------
+Home                    |
+Accounts                | 
+Products                | 
+Product Details         | 
+Bag                     | 
+Checkout                | 
+Wishlist                | 
+Profile                 | 
+Product Management      |
+Contact                 |
+Newsletter              |
+Privacy & T&C's         |
+
+</details>
+
+<details>
+<summary>Desktop (1440px)</summary>
+
+Page                    | Image
+--------------------    | ---------------
+Home                    |
+Accounts                | 
+Products                | 
+Product Details         | 
+Bag                     | 
+Checkout                | 
+Wishlist                | 
+Profile                 | 
+Product Management      | 
+Contact                 |
+Newsletter              |
+Privacy & T&C's         |
+
+</details>
 
 
 ## Browser Compatibility Tests 
