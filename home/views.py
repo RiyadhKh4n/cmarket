@@ -72,7 +72,7 @@ def subscribe(request):
                 messages.success(
                     request, 'Successfully subscribed to our Newsletter!'
                     )
-                subscriber_email = email 
+                subscriber_email = email
                 subject = render_to_string(
                         'home/confirmation_emails/confirmation_email_subject.txt',  # noqa
                         {'email': email})
