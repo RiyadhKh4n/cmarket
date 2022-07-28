@@ -186,12 +186,15 @@
 
     ![manage.py](documentation/testing/manage.png)
 
-
 ## Lighthouse Score
+
+### Desktop:
+
+![desktop](documentation/testing/lighthouse-desktop.png)
 
 ### Mobile:
 
-### Desktop:
+![mobile](documentation/testing/lighthouse-mobile.png)
 
 ## User Story Tests
 
