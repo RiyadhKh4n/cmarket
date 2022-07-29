@@ -365,7 +365,11 @@ Mobile                  | ![mobile](documentation/testing/lighthouse-mobile.png)
 
 47. As a website owner I can add a product and the sku is created automatically so that the sku's for the products are standardised and I do not have to manually add a sku
 
+    Decided not to implement the sku field for the product model
+
 48. As a website owner I can have the sku of a product updated when the category is changed so that the sku of the product is reflects the new category
+
+    Decided not to implement the sku field for the product model
 
 ### Admin for User Profiles:
 
@@ -375,11 +379,20 @@ Mobile                  | ![mobile](documentation/testing/lighthouse-mobile.png)
 
 50. As a website owner I want my website to contain relevant keywords so that users searching for these keywords will be more likely to find my website in web search results
 
+    ![meta](documentation/testing/metatag.png)
+
 51. As a website owner I have a link to the Facebook business page on the website so that customers or visitors to the website can follow the Facebook page and I can generate more business through the Facebook page
+
+    ![d.footer](documentation/testing/footerdesktop.png)
+    ![fb](documentation/testing/facebook-page.png)
 
 52. As a website owner I have relevant keywords included in the webpage metadata so that it helps improve SEO so that users searching for these keywords can find my website
 
+    ![footer](documentation/testing/footerdesktop.png)
+
 53. As a website owner I can have a sitemap.xml and robots.txt file created for the website so that search engines can crawl the essential pages of the site and therefore users can find the site when searching key terms in search engine searches
+
+    ![sitemap](documentation/testing/sitemap-robots.png)
 
 ## Manual Testing
 
