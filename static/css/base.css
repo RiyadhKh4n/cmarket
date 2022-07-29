@@ -502,6 +502,11 @@ tr > th,
         color: #fff;
     }
 
+    .mobile-top-header-ul {
+        padding: 0;
+        margin:0;
+    }
+
     .burger-menu {
         background-color: white;
         margin-right: 5px;
