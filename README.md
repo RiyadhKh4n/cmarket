@@ -323,10 +323,6 @@ The data is organised using the following models:
 * ### Icons
 
     All icons used in the website were taken from [fontawesome](https://fontawesome.com/start)
-
-    - #### Favicon
-
-        The favicon for the site was created with [favicon.cc](https://www.favicon.cc/) 
  
 # Features
  
@@ -452,8 +448,6 @@ As the site admin, I am able to add, edit and delete products through the front-
 ![menu](documentation/testing/menu.png)
 ![add-product](documentation/testing/add-product.png)
 ![edit-product](documentation/testing/edit-product.png)
-
-## Future Features:
 
 # Technologies
 ## Programming Languages:
