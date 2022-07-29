@@ -16,7 +16,7 @@ Bag                     | ![bag](documentation/testing/html-bag.png)
 Checkout                | ![checkout](documentation/testing/html-checkout.png)
 Wishlist                | ![wishlist](documentation/testing/html-wishlist.png)
 Profile                 | ![profile](documentation/testing/html-profiles.png)
-Product Management      | ![pm](documentation/testing/)
+Product Management      | ![pm](documentation/testing/html-prod-man.png)
 Contact                 | ![contact](documentation/testing/html-contact.png)
 Newsletter              | ![newsletter](documentation/testing/html-news.png)
 Privacy & T&C's         | ![ptc](documentation/testing/html-privacy.png)
@@ -572,7 +572,6 @@ Privacy & T&C's         | ![ptc](documentation/testing/fire-privacy.png)
 
 </details>
 
-
 ## GitHub Issues
 
 When developing the project, I used GitHub Issues as a way to track my work on GitHub, and make notes of any bugs or features that I needed to fix/implement.
@@ -580,3 +579,5 @@ When developing the project, I used GitHub Issues as a way to track my work on G
 - [Here](https://github.com/RiyadhKh4n/cmarket/issues?q=is%3Aissue+is%3Aclosed) you can find a list of all issues used for the development of cMarket 
 
 ## Bugs
+
+- When the user completes their purchase, the overlay does not go above the footer or the fa-search in the navbar. I believe it is an issue to do with the z-index however this is something I will fix in later iterations of the project
