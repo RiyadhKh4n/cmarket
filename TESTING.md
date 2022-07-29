@@ -7,7 +7,7 @@
 
 Page                    | Image
 --------------------    | ---------------
-Whole Site              | ![site](documentation/testing/)
+Whole Site              | ![site](documentation/testing/total-w3c-test.png)
 Home                    | ![home](documentation/testing/html-home.png)
 Accounts                | ![acc](documentation/testing/html-accounts.png)
 Products                | ![product](documentation/testing/html-products.png)
