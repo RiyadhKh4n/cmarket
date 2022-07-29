@@ -265,6 +265,10 @@ tr > th,
     letter-spacing: 1px;
 }
 
+.filtering-option > ul {
+    padding-left:0px;
+}
+
 .shop-filter {
     background: #373b46;
     padding: 26px;
