@@ -355,25 +355,37 @@ Mobile                  | ![mobile](documentation/testing/lighthouse-mobile.png)
 
 42. As a website owner I can turn on or off the active flag on a product so that I can add or remove it from appearing in the shop for customers when it is in/out of stock
 
+    I decided not to implement this functionality
+
 43. As a website owner I can delete a product so that it will not appear in the shop
+
+    ![del](documentation/testing/delete.png)
 
 44. As a website owner I can access the Django admin site for the categories so that I can add, edit or delete categories from here and new products for these categories can be added to the shop
 
+    ![cat](documentation/testing/admin-cat.png)
+
 45. As a site owner I can access the Django admin site for the products so that I can view, edit, delete products from here as well as from the website
+
+    ![prod](documentation/testing/admin-product-page.png)
 
 46. As a website owner I can see orders in the admin site so that I can access the order details and fulfil the orders
 
+    ![order](documentation/testing/admin-order.png)
+
 47. As a website owner I can add a product and the sku is created automatically so that the sku's for the products are standardised and I do not have to manually add a sku
 
-    Decided not to implement the sku field for the product model
+    Decided not to implement the sku field in the product model
 
 48. As a website owner I can have the sku of a product updated when the category is changed so that the sku of the product is reflects the new category
 
-    Decided not to implement the sku field for the product model
+    Decided not to implement the sku field in the product model
 
 ### Admin for User Profiles:
 
 49. As a site owner I can access the Django admin site for Profiles so that I can view user profiles
+
+    ![profile](documentation/testing/50.png)
 
 ### Marketing / SEO
 
@@ -393,8 +405,6 @@ Mobile                  | ![mobile](documentation/testing/lighthouse-mobile.png)
 53. As a website owner I can have a sitemap.xml and robots.txt file created for the website so that search engines can crawl the essential pages of the site and therefore users can find the site when searching key terms in search engine searches
 
     ![sitemap](documentation/testing/sitemap-robots.png)
-
-## Manual Testing
 
 ## Responsiveness Testing
 
