@@ -41,9 +41,7 @@
     
   <body>
 
-    <!-- Navigation -->
-
-    <nav class="navbar navbar-expand-lg">
+    <header class="navbar navbar-expand-lg">
       <a class="navbar-brand logo" href="{% url 'home' %}">cMarket</a>
     
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -61,7 +59,7 @@
                     </a>
                 </li>
                 <li class="list-inline-item dropdown">
-                    <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <a class="text-black nav-link" href="#" id="user-options1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <div class="text-center">
                             <div>
                                 <i class="fas fa-user"></i>
@@ -69,7 +67,7 @@
                             <p class="nav-items my-0">My Account</p>
                         </div>
                     </a>
-                    <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                    <div class="dropdown-menu border-0" aria-labelledby="user-options1">
                         {% if request.user.is_authenticated %}
                             {% if request.user.is_superuser %}
                                 <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
@@ -120,10 +118,12 @@
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     {% include 'includes/mobile-top-header.html' %}
-                    {% include 'includes/main-nav.html' %}
+                    <div class="collapse navbar-collapse" id="main-nav">
+                        {% include 'includes/main-nav.html' %}
+                    </div>
                 </nav>
             </div>
-        </nav>
+    </header>
 
         <main class="flex-shrink-0 main-bg">
             {% block content %}
@@ -151,10 +151,17 @@
                 </div>
                 <div class="col links-col">
                     <ul class="footer-ul">
-                        <li><a href="{% url 't&c' %}">Terms & Conditions</a></li>
-                        <li><a href="{% url 'account_signup' %}">Register</a></li>
-                        <li><a href="{% url 'account_login' %}">Login</a></li>
-                        <li><a href="{% url 'contact' %}">Contact</a></li>
+                        {% if request.user.is_authenticated %}
+                            <li><a href="{% url 't&c' %}">Terms & Conditions</a></li>
+                            <li><a href="{% url 'contact' %}">Contact</a></li>
+                            <li><a href="{% url 'account_logout' %}">Log Out</a></li>
+                        {% else %}
+                            <li><a href="{% url 't&c' %}">Terms & Conditions</a></li>
+                            <li><a href="{% url 'contact' %}">Contact</a></li>
+                            <li><a href="{% url 'account_signup' %}">Register</a></li>
+                            <li><a href="{% url 'account_login' %}">Login</a></li>
+                         
+                        {% endif %}
                     </ul>
                 </div>
                 <div class="col links-col">
@@ -195,12 +202,12 @@
                 {% endwith %}
             {% endfor %}
         </div>
-    {% endif %}
+        {% endif %}
 
     {% block page_header %}{% endblock %}
 
     {% block postloadjs %}
-    <script type="text/javascript">
+    <script>
         $('.toast').toast('show');
     </script>
     {% endblock %}

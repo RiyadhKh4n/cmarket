@@ -30,27 +30,30 @@
                    
                     <hr>
                     <div class="filtering-option">
-                        <li class="filter-li">
-                            <h5>Gender</h5>
-                            <div class="border-0 filtering-div" aria-labelledby="clothing-link">
-                                <a href="{% url 'products' %}?category=men" class="">Men</a>
-                                <a href="{% url 'products' %}?category=women" class="">Women</a>
-                                <a href="{% url 'products' %}?category=unisex" class="">Unisex</a>
-                            </div>
-                        </li>
+                        <ul>
+                            <li class="filter-li">
+                                <h5>Gender</h5>
+                                <div class="border-0 filtering-div" aria-labelledby="clothing-link">
+                                    <a href="{% url 'products' %}?category=men" class="">Men</a>
+                                    <a href="{% url 'products' %}?category=women" class="">Women</a>
+                                    <a href="{% url 'products' %}?category=unisex" class="">Unisex</a>
+                                </div>
+                            </li>
+                        </ul>
 
                         <hr> 
-
-                        <li class="filter-li">
-                            <h5>Product Type</h5>
-                            <div class="border-0 filtering-div" aria-labelledby="clothing-link">
-                                <a href="{% url 'products' %}?category=hoodies" class="">Hoodies</a>
-                                <a href="{% url 'products' %}?category=tshirt" class="">T-Shirt</a>
-                                <a href="{% url 'products' %}?category=jumpers" class="">Jumpers</a>
-                                <a href="{% url 'products' %}?category=accessories" class="">Accessories</a>
-                            </div>
-                        </li>
                         
+                        <ul>
+                            <li class="filter-li">
+                                <h5>Product Type</h5>
+                                <div class="border-0 filtering-div" aria-labelledby="clothing-link">
+                                    <a href="{% url 'products' %}?category=hoodies" class="">Hoodies</a>
+                                    <a href="{% url 'products' %}?category=tshirt" class="">T-Shirt</a>
+                                    <a href="{% url 'products' %}?category=jumpers" class="">Jumpers</a>
+                                    <a href="{% url 'products' %}?category=accessories" class="">Accessories</a>
+                                </div>
+                            </li>
+                        </ul>
                         <hr> 
 
                         <a class="clear-filter" href="{% url 'products' %}">Clear Filter</a>
@@ -135,7 +138,7 @@
 
 {% block postloadjs %}
     {{ block.super }}
-    <script type="text/javascript">
+    <script>
         $('#sort-selector').change(function() {
             var selector = $(this);
             var currentUrl = new URL(window.location);
