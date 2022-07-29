@@ -619,6 +619,10 @@ tr > th,
     .auth-p {
         font-size: 0.8em;
     }
+
+    .wishlist-card {
+        padding-bottom: 10px;
+    }
 }
 
 @media only screen and (min-width: 375px) {
